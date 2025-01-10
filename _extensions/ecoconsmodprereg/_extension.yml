@@ -13,5 +13,31 @@ contributes:
       highlight-style: github
       linkcolor: blue
     pdf:
-      toc: false
+      documentclass: article
       number-sections: true
+      highlight-style: github
+      linkcolor: blue
+      citecolor: blue
+      keep-tex: true
+      template-partials: 
+        - title.tex
+      include-in-header:
+        text: |
+          \usepackage{easy-todo}
+          \usepackage{geometry}
+          \usepackage{xcolor}
+          \usepackage{fancyhdr}
+          \usepackage{sectsty}
+          \usepackage{fontspec}
+          \usepackage[noblocks]{authblk}
+          \renewcommand*{\Authsep}{, }
+          \renewcommand*{\Authand}{, }
+          \renewcommand*{\Authands}{, }
+          \renewcommand\Affilfont{\small}
+          \usepackage[sfdefault]{cabin}
+          \usepackage[condensed]{roboto}
+          \usepackage[T1]{fontenc}
+          \usepackage{titlesec}
+pdf-engine: xelatex
+mainfont: Lato
+sansfont: Roboto
