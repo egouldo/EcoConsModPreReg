@@ -1,15 +1,44 @@
 ---
 title: "Ecological Modelling Preregistration Template"
-subtitle: "Suitable for use in Ecology and Conservation."
 format:
+  EcoConsModPreReg-pdf: default
   EcoConsModPreReg-html: default
-authors:
-  - Elliot Gould
-  - Hannah Fraser
-  - Libby Rumpff
-  - Jian Yen
-  - Megan Good
-  - Chris Jones
+author:
+  - name: Elliot Gould
+    email: elliot.gould@unimelb.edu.au
+    orcid: 0000-0002-6585-538X
+    roles: maintainer
+    attributes: corresponding
+    affil-id: 1
+  - name: David Duncan
+    orcid: 0000-0003-4411-8214
+    roles: contributor
+    affil-id: 1
+  - name: Hannah Fraser
+    orcid: 0000-0003-2443-4463
+    roles: contributor
+    affil-id: 1
+  - name: Libby Rumpff
+    roles: contributor
+    orcid: 0000-0001-9400-8086
+    affil-id: 1
+  - name: Jian Yen
+    roles: contributor
+    orcid: 0000-0001-7964-923X
+    affil-id: 2
+  - name: Megan Good
+    orcid: 0000-0002-6908-1633
+    roles: contributor
+    affil-id: 1
+  - name: Chris Jones
+    roles: contributor
+    orcid: 0000-0003-2833-0194
+    affil-id: 2
+affiliations:
+  - id: 1
+    name: University of Melbourne
+  - id: 2
+    name: Arthur Rylah Institute for Environmental Research
 date: last-modified
 bibliography: template_files/references.bib
 ---
@@ -193,7 +222,7 @@ The identification and definition of primary model input variables should be dri
 ::: callout-note
 ## Explanation
 
-*This section specifies the plan for collecting, processing and preparing data available for parameterisation, determining model structure, and for scenario analysis. It also allows the researchers to disclose any prior interaction with the data.*
+This section specifies the plan for collecting, processing and preparing data available for parameterisation, determining model structure, and for scenario analysis. It also allows the researchers to disclose any prior interaction with the data.
 :::
 
 ### Collate available data sources that could be used to parameterise or structure the model
@@ -313,8 +342,8 @@ All modelling approaches require the selection of model features, which conform 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] For each response, predictor, and covariate, *specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii]* .
--   [ ] *Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].*
+-   [ ] For each response, predictor, and covariate, specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii].
+-   [ ] Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].
 :::
 
 ### Choose model family
@@ -579,7 +608,7 @@ Uncertainty can arise from different modelling techniques, response data and pre
 ::: callout-note
 ## Explanation
 
-*Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input [@Saltelli2019].*
+Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input [@Saltelli2019].
 :::
 
 ::: callout-caution
