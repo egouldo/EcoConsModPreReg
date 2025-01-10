@@ -10,3 +10,6 @@ contributes:
       toc-location: left
       toc-expand: true
       number-sections: true
+    pdf:
+      toc: false
+      number-sections: true
