@@ -1,6 +1,8 @@
 ---
 title: "Ecological Modelling Preregistration Template"
 subtitle: "Suitable for use in Ecology and Conservation."
+format:
+  EcoConsModPreReg-html: default
 authors:
   - Elliot Gould
   - Hannah Fraser
@@ -8,16 +10,8 @@ authors:
   - Jian Yen
   - Megan Good
   - Chris Jones
-sidebar: false
+date: last-modified
 bibliography: template_files/references.bib
-toc-location: left
-toc-expand: true
-number-sections: true
-format:
-  html:
-    theme: flatly
-    css: styles.css
-    toc: true
 ---
 
 # Problem Formulation
