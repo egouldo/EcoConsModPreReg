@@ -10,6 +10,8 @@ contributes:
       toc-location: left
       toc-expand: true
       number-sections: true
+      highlight-style: github
+      linkcolor: blue
     pdf:
       toc: false
       number-sections: true
