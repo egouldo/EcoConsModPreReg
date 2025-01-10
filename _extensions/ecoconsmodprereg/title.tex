@@ -1,0 +1,24 @@
+% https://stackoverflow.com/a/75043433
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+
+$for(by-author)$
+\author$if(it.metadata.affil-id)$[$it.metadata.affil-id$]$endif${$it.name.literal$}
+$endfor$
+
+$if(by-affiliation)$
+$for(by-affiliation)$
+\affil[$it.id$]{$it.name$}
+$endfor$
+$endif$
+
+
+\date{$date$}
+
+%% Set page size & margins
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=20mm}
