@@ -54,9 +54,65 @@ keywords:
   - open-science
 ---
 
-# Problem Formulation
+# Study Information {.unnumbered}
 
-::: callout-note
+## Conflict of Interest Statement {.unnumbered}
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] Explain any real or perceived conflicts of interest with this study execution. For example, any interests or activities that might be seen as influencing the research (e.g., financial interests in a test or procedure, funding by companies for research).
+:::
+
+## Data Availability Statement {.unnumbered}
+
+::: callout-caution
+## Preregistration Item
+
+*Select one option from below:*
+
+-   [ ] "We plan to make the data available (yes / no)," specify the planned data availability level from the following options:
+    -   Data access via download; usage of data for all purposes (public use file)
+    -   Data access via download; usage of data restricted to scientific purposes (scientific use file)
+    -   Data access via download; usage of data has to be agreed and defined on an individual case basis
+    -   Data access via secure data center (no download, usage/analysis only in a secure data center)
+    -   Data available upon email request by member of scientific community
+    -   Other (please specify)
+-   [ ] "Data will not be made available"
+    -   [ ] Justify reason for not making data available.
+:::
+
+## Code Availability {.unnumbered}
+
+::: callout-caution
+## Preregistration Item
+
+*Select one option from below:*
+
+-   [ ] "We plan to make the code available (yes / no)," specify the planned code availability level from the following options:
+    -   Code access via download; usage of code for all purposes (public use file)
+    -   Code access via download; usage of code restricted to scientific purposes (scientific use file)
+    -   Code access via download; usage of code has to be agreed and defined on an individual case basis
+    -   Code access via secure code center (no download, usage/analysis only in a secure code center)
+    -   Code available upon email request by member of scientific community
+    -   Other (please specify)
+-   [ ] "Code will not be made available"
+    -   [ ] Justify reason for not making code available.
+:::
+
+## Ethics {.unnumbered}
+
+::: callout-caution
+## Preregistration Item
+
+-   [ ] Select and respond to the relevant item below:
+    -   If relevant institutional ethical approval for the study has been obtained, provide the relevant identifier, and link to relevant documents.
+    -   If ethical approval has not yet been obtained, but is required, provide a brief overview of plans for obtaining study approval in accordance with established ethical guidelines.
+    -   Alternatively, if the study is exempt from ethical approval, explain exemption.
+:::
+
+# Problem Formulation {#sec-problem-formulation}
+
 ## Rationale & Explanation
 
 This section specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e. model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they foresee unacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later). It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits [@Grimm:2014es].
