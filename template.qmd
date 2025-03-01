@@ -44,6 +44,14 @@ affiliations:
     name: "Arthur Rylah Institute for Environmental Research"
 date: last-modified
 bibliography: template_files/references.bib
+license: CC-BY-NC-SA
+abstract: "Blah blah"
+keywords: 
+  - preregistration
+  - preregistration template
+  - transparency
+  - reproducibility
+  - open-science
 ---
 
 # Problem Formulation
