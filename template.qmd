@@ -1,5 +1,5 @@
 ---
-title: "Ecological Modelling Preregistration Template"
+title: "Ecological Modelling Preregistration Template" #focussed, descriptive title with relevant key terms reflecting what will be done in study
 format:
   EcoConsModPreReg-pdf: default
   EcoConsModPreReg-html: default
