@@ -113,6 +113,7 @@ keywords:
 
 # Problem Formulation {#sec-problem-formulation}
 
+::: {.callout-note collapse="true"}
 ## Rationale & Explanation
 
 This section specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e. model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they foresee unacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later). It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits [@Grimm:2014es].
@@ -120,7 +121,7 @@ This section specifies the decision-making context in which the model will be us
 
 ## Model Context and Purpose
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Rationale & Explanation
 
 Defining the purpose of the model is critical because the model purpose influences choices at later stages of model development [@Jakeman:2006ii]. Common model purposes in ecology include: gaining a better qualitative understanding of the target system, synthesising and reviewing knowledge, and providing guidance for management and decision-making [@Jakeman:2006ii]. Note that modelling objectives are distinct from the analytical objectives of the model.
@@ -156,7 +157,7 @@ The scope of the model includes temporal and spatial resolutions, which should a
 
 ### Analytical objectives {#analyticalobjectives}
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 How will the model be analysed, what analytical questions will the model be used to answer? For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement. Other examples from ecological decision-making include: to compare the performance of alternative management actions under budget constraint [@Fraser:2017jf] to search for robust decisions under uncertainty [@McDonald-Madden2008], to choose the conservation policy that minimises uncertainty \[insert ref\]. See other examples in [@Moallemi2019].
@@ -198,7 +199,7 @@ How will the model be analysed, what analytical questions will the model be used
 
 ### Intended application of results
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Preregistration Items in this section are relevant to model transferability [@Yates2018] and constraints on generality in model analysis interpretation. How far do can the results be extrapolated based on the study design (data + model + analysis)? For instance, if there are many confounding variables and not enough spatial / environmental replication, then making broader more general claims beyond the stated boundaries of the model (@analyticalobjectives) may not be warranted. However, larger generalisations about results may be acceptable if the data comes from experimentally manipulated or controlled systems.
@@ -222,7 +223,7 @@ Preregistration Items in this section are relevant to model transferability [@Ya
 
 # Define Conceptual Model
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr]. The conceptual model describes the biological mechanisms relevant to the ecological problem and should capture basic premises about how the target system works, including any prior knowledge and assumptions about system processes. Conceptual models may be represented in a variety of formats, such as influence diagrams, linguistic model block diagram or bond graphs, and these illustrate how model drivers are linked to both outputs or observed responses, and internal (state) variables [@Jakeman:2006ii].
@@ -265,7 +266,7 @@ Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr]
 
 ## Identify predictor and response variables
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 The identification and definition of primary model input variables should be driven by scenario definitions, and by the scope of the model described in the problem formulation phase [@Mahmoud2009].
@@ -286,7 +287,7 @@ The identification and definition of primary model input variables should be dri
 
 ## Define prior knowledge, data specification and evaluation
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 This section specifies the plan for collecting, processing and preparing data available for parameterisation, determining model structure, and for scenario analysis. It also allows the researchers to disclose any prior interaction with the data.
@@ -328,7 +329,7 @@ This section specifies the plan for collecting, processing and preparing data av
 
 ### Describe any data exploration or preliminary data analyses.
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018].
@@ -348,7 +349,7 @@ In most modelling cases, it is necessary to perform preliminary analyses to unde
 
 ### Data evaluation, exclusion and missing data
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Documenting issues with reliability is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems [@Grimm:2014es]. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand [@Mahmoud2009].
@@ -376,7 +377,7 @@ Documenting issues with reliability is important because data quality and ecolog
 
 # Formalise and Specify Model
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 In this section describe what quantitative methods you will use to build the model/s, explain how they are relevant to the client/manager/user's purpose.
@@ -384,7 +385,7 @@ In this section describe what quantitative methods you will use to build the mod
 
 ## Model class, modelling framework and approach
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Modelling approaches can be described as occurring on a spectrum from correlative or phenomenological to mechanistic or process-based [@Yates2018]; where correlative models use mathematical functions fitted to data to describe underlying processes, and mechanistic models explicitly represent processes and details of component parts of a biological system that are expected to give rise to the data [@White2019a]. A model 'class,' 'family'' or 'type' is often used to describe a set of models each of which has a distinct but related sampling distribution [@Liu2008]. The model family is driven by choices about the types of variables covered and the nature of their treatment, as well as structural features of the model, such as link functions, spatial and temporal scales of processes and their interactions [@Jakeman:2006ii].
@@ -393,12 +394,12 @@ Modelling approaches can be described as occurring on a spectrum from correlativ
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in 1.1.2 and 1.1.3.
+-   [ ] Describe what modelling framework, approach or class of model you will use to implement your model and relate your choice to the model purpose and analytical objectives described in @sec-model-purpose-context-and-problem-context and @sec-analytical-objectives.
 :::
 
 ## Choose model features and family
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps [@Jakeman:2006ii]. The choice of model are determined in conjunction with features are selected. Model features include elements such as the functional form of interactions, data structures, measures used to specify links, any bins or discretisation of continuous variables. It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller [@Jakeman:2006ii]. However, if changes to these fundamental aspects of the model do need to change, document how and why these choices were made, including any results used to support any changes in the model.
@@ -424,7 +425,7 @@ All modelling approaches require the selection of model features, which conform 
 
 ## Describe *approach* for identifying model structure
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 This section relates to the process of determining the best/most efficient/parsimonious representation of the system at the appropriate scale of concern [@Jakeman:2006ii] that best meets the analytical objectives specified in the problem formulation phase. Model structure refers to the choice of variables included in the model, and the nature of the relationship among those variables. Approaches to finding model structure and parameters may be knowledge-supported, or data-driven [@Boets:2015gl]. Model selection methods can include traditional inferential approaches such as unconstrained searches of a dataset for patterns that explain variations in the response variable, or use of ensemble-modelling methods [@Barnard2019]. Ensemble modelling procedures might aim to derive a single model, or a multi-model average [@Yates2018]. Refining actions to develop a model could include iteratively dropping parameters or adding them, or aggregating / disaggregating system descriptors, such as dimensionality and processes [@Jakeman:2006ii].
@@ -444,7 +445,7 @@ This section relates to the process of determining the best/most efficient/parsi
 
 ## Describe parameter estimation technique and performance criteria
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Before calibrating the model to the data, the performance criteria for judging the calibration (or model fit) are specified. These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure [@Jakeman:2006ii]. For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance. Modellers will need to consider whether the assumptions of the estimation technique yielding those desired properties are suited to the problem at hand. For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g. spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) [@Jakeman:2006ii].
@@ -480,7 +481,7 @@ Before calibrating the model to the data, the performance criteria for judging t
 
 ## Specify formal model(s)
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Once critical decisions have been made about the modelling approach and method of model specification, the conceptual model is translated into the quantitative model.
@@ -498,7 +499,7 @@ Once critical decisions have been made about the modelling approach and method o
 
 ## Model calibration and validation scheme
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 This section pertains to any data calibration, validation or testing schemes that will be implemented. For example, the model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation) [@Yates2018; @Barnard2019]. For some types of models, hyper-parameters are estimated from data, and may be tuned on further independent holdouts of the training data, ("validation data").
@@ -512,7 +513,7 @@ This section pertains to any data calibration, validation or testing schemes tha
 
 ### Describe calibration/validation data
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation & Rationale
 
 The following items pertain to properties of the *datasets* used for calibration (training), validation, and testing.
@@ -534,7 +535,7 @@ The following items pertain to properties of the *datasets* used for calibration
 
 ## Implementation verification
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation & Examples
 
 Model implementation verification is the process of ensuring that the model has been correctly implemented, and that the model performs as described by the model description [@Grimm:2014es]. This process is distinct from model checking, which assesses the model's performance in representing the system of interest [@Conn:2018hd].
@@ -551,7 +552,7 @@ Model implementation verification is the process of ensuring that the model has 
 
 ## Model checking
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Rationale & Explanation
 
 "Model Checking" goes by many names ("conditional verification", "quantitative verification", "model output verification" ), and refers to a series of analyses that assess a model's performance in representing the system of interest [@Conn:2018hd]. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system [@Conn:2018hd]. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation [@Jakeman:2006ii].
@@ -570,7 +571,7 @@ Model implementation verification is the process of ensuring that the model has 
 
 ### Qualitative model checking
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 This step is largely informal and case-specific, but requires‚ 'face validation' with model users / clients / managers who aren't involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an defensible [@Grimm:2014es]. This process is sometimes called a ‚"laugh test" or a "pub test" and in addition to checking the model's believability, it builds the client's confidence in the model [@Jakeman:2006ii]. Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment.
@@ -597,7 +598,7 @@ This step is largely informal and case-specific, but requires‚ 'face validatio
 
 # Model Validation and Evaluation
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 The model validation & evaluation phase comprises a suite of analyses that collectively inform inferences about whether, and under what conditions, a model is suitable to meet its intended purpose [@Augusiak:2014gz]. Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model's intended purpose. The outcomes of these analyses build confidence in the model applications and increase understanding of model strengths and limitations. Model evaluation including, model analysis, should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. The higher the proportion of calibrated, or uncertain parameters, "the greater the risk that the model seems to work correctly, but for the wrong reasons" (citaiton). Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mechanisms of the system pertinent to the research question or the decision problem underpinning the model [@Grimm:2014es]. Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model [@Grimm2016].
@@ -607,7 +608,7 @@ The model validation & evaluation phase comprises a suite of analyses that colle
 
 ## Model output corroboration
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are spatially and/or temporally independent from the training dataset minimises the risk of artificially inflating model performance measures [@Araujo2019]. Although the corroboration of model outputs against an independent validation dataset is considered the 'gold standard' for showing that a model properly represents the internal organisation of the system, model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames, hence, why ecologists often model in the first place [@Grimm:2014es]. Independent predictions might instead be tested on sub-models. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model output is [@Grimm:2014es].
@@ -623,7 +624,7 @@ Ideally, model outputs or predictions are compared to independent data and patte
 
 ## Choose performance metrics and criteria
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019]. Note that the performance metrics and criteria in this section are used for evaluating the structured and parameterised models (ideally) on independent holdout data, so this step is additional to any performance criteria used for determining model structure or parameterisation in section X.
@@ -641,7 +642,7 @@ Model performance can be quantified by a range of tests, including measures of a
 
 ## Model analysis
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Rationale & Explanation
 
 Uncertainty in models arises due to incomplete system understanding (which processes to include, or which interact), from imprecise, finite and sparese data measurements, and from uncertainty in input conditions and scenarios for model simulations or runs [@Jakeman:2006ii]. Non-technical uncertainties can also be introduced throughout the modellign process, such as uncertainties arising from issues in problem-framing, indeterminicies, and modeller / client values [@Jakeman:2006ii].
@@ -655,7 +656,7 @@ Because the results from a full suite of sensitivity analysis and uncertainty an
 
 ### Uncertainty Analyses
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Uncertainty can arise from different modelling techniques, response data and predictor variables [@Araujo2019]. Uncertainty analyses characterise the uncertainty in model outputs, and identify how uncertainty in model parameters affects uncertainty in model output, but does not identify which model assumptions are driving this behaviour [@Grimm:2014es; @Saltelli2019]. Uncertainty analyses can include propagating known uncertainties through the model, or by investigating the effect of different model scenarios with different parameters and modelling technique combinations [@Araujo2019], for example. It could also include characterising the output distribution, such as through empirical construction using model output data points. It could also include extracting summary statistics like the mean, median and variance from this distribution, and perhaps constructing confidence intervals on the mean [@Saltelli2019].
@@ -672,7 +673,7 @@ Uncertainty can arise from different modelling techniques, response data and pre
 
 ### Sensitivity analyses
 
-::: callout-note
+::: {.callout-note collapse="true"}
 ## Explanation
 
 Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input [@Saltelli2019].
