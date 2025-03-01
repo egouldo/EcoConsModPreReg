@@ -55,6 +55,10 @@ contributes:
     docx: 
       toc: true
       toc-depth: 2
+      filters:
+        - authors-block
+      format-resources:
+        - custom-reference-doc.docx
 pdf-engine: xelatex
 mainfont: Lato
 sansfont: Roboto
