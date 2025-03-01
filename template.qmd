@@ -10,32 +10,39 @@ authors: # Replace with authors in your study
     orcid: 0000-0002-6585-538X
     roles: [conceptualization, maintainer, funding, investigation, methodology, project administration, resources, software, validation, vizualisation, editing, writing]
     attributes: corresponding
-    affil-id: 1
+    affiliations:
+      - ref: 1
     id: EG
   - name: David Duncan
     orcid: 0000-0003-4411-8214
     roles: [contributor, methodology]
-    affil-id: 1
+    affiliations:
+      - ref: 1
   - name: Hannah Fraser
     orcid: 0000-0003-2443-4463
     roles: [contributor, conceptualization, methodology, supervision, editing]
-    affil-id: 1
+    affiliations:
+      - ref: 1
   - name: Libby Rumpff
     roles: [contributor, conceptualization, methodology, supervision, writing, editing]
     orcid: 0000-0001-9400-8086
-    affil-id: 1
+    affiliations:
+      - ref: 1
   - name: Jian Yen
     roles: [contributor, data curration, analysis, investigation, methodology, project administration, resources, software, validation, vizualisation, editing]
     orcid: 0000-0001-7964-923X
-    affil-id: 2
+    affiliations:
+      - ref: 2
   - name: Megan Good
     orcid: 0000-0002-6908-1633
     roles: [contributor, methodology, editing]
-    affil-id: 1
+    affiliations:
+      - ref: 1
   - name: Chris Jones
     roles: [contributor, data curation, analysis, funding, methodology, project administration, resources, editing]
     orcid: 0000-0003-2833-0194
-    affil-id: 2
+    affiliations:
+      - ref: 2
     id: CJ
 affiliations:
   - id: 1
