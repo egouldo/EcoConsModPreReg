@@ -38,6 +38,9 @@ contributes:
           \usepackage[condensed]{roboto}
           \usepackage[T1]{fontenc}
           \usepackage{titlesec}
+    docx: 
+      toc: true
+      toc-depth: 2
 pdf-engine: xelatex
 mainfont: Lato
 sansfont: Roboto

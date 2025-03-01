@@ -3,7 +3,8 @@ title: "Ecological Modelling Preregistration Template" #focussed, descriptive ti
 format:
   EcoConsModPreReg-pdf: default
   EcoConsModPreReg-html: default
-author:
+  EcoConsModPreReg-docx: default
+authors: # Replace with authors in your study 
   - name: Elliot Gould
     email: elliot.gould@unimelb.edu.au
     orcid: 0000-0002-6585-538X
