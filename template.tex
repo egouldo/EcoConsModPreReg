@@ -1,0 +1,1969 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{easy-todo}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{fontspec}
+\usepackage[noblocks]{authblk}
+\renewcommand*{\Authsep}{, }
+\renewcommand*{\Authand}{, }
+\renewcommand*{\Authands}{, }
+\renewcommand\Affilfont{\small}
+\usepackage[sfdefault]{cabin}
+\usepackage[condensed]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Ecological Modelling Preregistration Template},
+  pdfkeywords={preregistration, preregistration
+template, transparency, reproducibility, open-science},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+% https://stackoverflow.com/a/75043433
+\title{Ecological Modelling Preregistration Template}
+
+
+\author{Elliot Gould}
+\author{David Duncan}
+\author{Hannah Fraser}
+\author{Libby Rumpff}
+\author{Jian Yen}
+\author{Megan Good}
+\author{Chris Jones}
+\author{Workshop participants (to be added on acceptance of
+co-authorship)}
+
+\affil[1]{University of Melbourne}
+\affil[2]{Arthur Rylah Institute for Environmental Research}
+
+
+\date{2025-03-02}
+
+%% Set page size & margins
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=20mm}
+\begin{document}
+\maketitle
+\begin{abstract}
+Here we present a preregistration template for ecological models in
+ecology, conservation and related fields. For non-trivial modelling
+studies, especially where model parameter and structure is in any way
+data-contingent, we recommend taking an
+\emph{\href{https://egouldo.github.io/EcoConsPreReg/}{Adaptive
+Preregistration}} approach (\citeproc{ref-Gould2024a}{Gould et al.,
+2024}). Replace author, author-affiliations, keywords, title and
+abstract yaml metadata as relevant to your study. All preregistration
+items should be completed unless marked as optional, or are not
+applicable to your study.
+\end{abstract}
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\section*{Study Information}\label{study-information}
+\addcontentsline{toc}{section}{Study Information}
+
+\subsection*{Conflict of Interest
+Statement}\label{conflict-of-interest-statement}
+\addcontentsline{toc}{subsection}{Conflict of Interest Statement}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Explain any real or perceived conflicts of interest with this study
+  execution. For example, any interests or activities that might be seen
+  as influencing the research (e.g., financial interests in a test or
+  procedure, funding by companies for research).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection*{Data Availability
+Statement}\label{data-availability-statement}
+\addcontentsline{toc}{subsection}{Data Availability Statement}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Select one option from below:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  ``We plan to make the data available (yes / no),'' specify the planned
+  data availability level from the following options:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Data access via download; usage of data for all purposes (public use
+    file)
+  \item
+    Data access via download; usage of data restricted to scientific
+    purposes (scientific use file)
+  \item
+    Data access via download; usage of data has to be agreed and defined
+    on an individual case basis
+  \item
+    Data access via secure data center (no download, usage/analysis only
+    in a secure data center)
+  \item
+    Data available upon email request by member of scientific community
+  \item
+    Other (please specify)
+  \end{itemize}
+\item[$\square$]
+  ``Data will not be made available''
+
+  \begin{itemize}
+  \tightlist
+  \item[$\square$]
+    Justify reason for not making data available.
+  \end{itemize}
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection*{Code Availability}\label{code-availability}
+\addcontentsline{toc}{subsection}{Code Availability}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Select one option from below:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  ``We plan to make the code available (yes / no),'' specify the planned
+  code availability level from the following options:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Code access via download; usage of code for all purposes (public use
+    file)
+  \item
+    Code access via download; usage of code restricted to scientific
+    purposes (scientific use file)
+  \item
+    Code access via download; usage of code has to be agreed and defined
+    on an individual case basis
+  \item
+    Code access via secure code center (no download, usage/analysis only
+    in a secure code center)
+  \item
+    Code available upon email request by member of scientific community
+  \item
+    Other (please specify)
+  \end{itemize}
+\item[$\square$]
+  ``Code will not be made available''
+
+  \begin{itemize}
+  \tightlist
+  \item[$\square$]
+    Justify reason for not making code available.
+  \end{itemize}
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection*{Ethics}\label{ethics}
+\addcontentsline{toc}{subsection}{Ethics}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Select and respond to the relevant item below:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If relevant institutional ethical approval for the study has been
+    obtained, provide the relevant identifier, and link to relevant
+    documents.
+  \item
+    If ethical approval has not yet been obtained, but is required,
+    provide a brief overview of plans for obtaining study approval in
+    accordance with established ethical guidelines.
+  \item
+    Alternatively, if the study is exempt from ethical approval, explain
+    exemption.
+  \end{itemize}
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Problem Formulation}\label{sec-problem-formulation}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Rationale \& Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+This section specifies the decision-making context in which the model
+will be used or the intended scope and context of conclusions. Important
+components include the decision maker and stakeholders (including
+experts) and their view on: i) the nature of the problem or decision
+addressed and how the scope of the modelling tool fits within the
+(broader) context (i.e.~model purpose; ii) the spatial and temporal
+scales relevant to the decision context; iii) specified desired outputs;
+iv) role and inclusion in model development and testing; v) whether they
+foresee unacceptable outcomes that need to be represented in the model
+(i.e.~as constraints), and; vi) what future scenarios does the model
+need to account for (noting this may be revised later). It should also
+provide a summary of the domain of applicability of the model, and
+reasonable extrapolation limits (\citeproc{ref-Grimm:2014es}{Grimm et
+al., 2014}).
+
+\end{tcolorbox}
+
+\subsection{Model Context and Purpose}\label{model-context-and-purpose}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Rationale \& Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Defining the purpose of the model is critical because the model purpose
+influences choices at later stages of model development
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). Common model
+purposes in ecology include: gaining a better qualitative understanding
+of the target system, synthesising and reviewing knowledge, and
+providing guidance for management and decision-making
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). Note that
+modelling objectives are distinct from the analytical objectives of the
+model.
+
+The scope of the model includes temporal and spatial resolutions, which
+should also be defined here (\citeproc{ref-Mahmoud2009}{Mahmoud et al.,
+2009}). Any external limitations on model development, analysis and
+flexibility should also be outlined in this section
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+
+\end{tcolorbox}
+
+\subsubsection{Key stakeholders and model
+users}\label{key-stakeholders-and-model-users}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Identify relevant interest groups:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Who is the model for?
+\item[$\square$]
+  Who is involved in formulating the model?
+\item[$\square$]
+  How will key stakeholders be involved in model development?
+\item[$\square$]
+  Describe the decision-making context in which the model will be used
+  (if relevant).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Model purpose, context and problem
+context}\label{sec-model-purpose-context-and-problem-context}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Briefly outline:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  the ecological problem,
+\item[$\square$]
+  the decision problem (if relevant), including the decision-trigger and
+  any regulatory frameworks relevant to the problem,
+\item[$\square$]
+  how the model will address the problem, being clear about the scope of
+  the model i.e.~is the model addressing the whole problem, or part of
+  it? Are there any linked problems that your model should consider?
+\item[$\square$]
+  Ensure that you specify any focal taxa and study objectives.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Analytical objectives}\label{sec-analytical-objectives}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+How will the model be analysed, what analytical questions will the model
+be used to answer? For example, you might be using your model in a
+scenario analysis to determine which management decision is associated
+with minimum regret or the highest likelihood of improvement. Other
+examples from ecological decision-making include: to compare the
+performance of alternative management actions under budget constraint
+(\citeproc{ref-Fraser:2017jf}{Fraser et al., 2017}), to search for
+robust decisions under uncertainty
+(\citeproc{ref-McDonald-Madden2008}{McDonald-Madden et al., 2008}), to
+choose the conservation policy that minimises uncertainty
+(\citeproc{ref-McCarthy2011}{McCarthy et al., 2011}). See other examples
+in (\citeproc{ref-Moallemi2019}{Moallemi et al., 2019}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Provide detail on the analytical purpose and scope of the model:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  How will the model be analysed and what analytical questions will the
+  model be used to answer?
+\item[$\square$]
+  Candidate decisions should be investigated and are specified a priori.
+  Depending on the modelling context, they may be specified by
+  stakeholders, model users or the analyst
+  (\citeproc{ref-Moallemi2019}{Moallemi et al., 2019}).
+
+  \begin{itemize}
+  \tightlist
+  \item[$\square$]
+    Describe the method used to identify relevant management actions and
+  \item[$\square$]
+    specify management actions to be considered included in the model.
+  \item[$\square$]
+    Are there potentially unacceptable management or policy outcomes
+    identified by stakeholders that should be captured in the model,
+    i.e.~as constraints?
+  \end{itemize}
+\item[$\square$]
+  Are there scenarios that model inputs or outputs that must
+  accommodated? Scenarios should be set a priori, (i.e.~before the model
+  is built, \citeproc{ref-Moallemi2019}{Moallemi et al., 2019}) and may
+  be stakeholder-defined or driven by the judgement of the modeller or
+  other experts (\citeproc{ref-Mahmoud2009}{Mahmoud et al., 2009}).
+
+  \begin{itemize}
+  \tightlist
+  \item[$\square$]
+    If relevant, describe what processes you will use to elicit and
+    identify relevant scenarios, e.g.~literature review, structured
+    workshops with stakeholders or decision-makers.
+  \item[$\square$]
+    Specify scenarios under which decisions are investigated.
+  \end{itemize}
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Logistical Constraints}\label{logistical-constraints}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  What degree of flexibility is required from the model? Might the model
+  need to be quickly reconfigured to explore new scenarios or problems
+  proposed by clients / managers / model-users?
+\item[$\square$]
+  Are there any limitations on model development analysis and
+  flexibility, such as time or budget constraints, for example, does a
+  model need to be deployed rapidly?
+
+  \begin{itemize}
+  \tightlist
+  \item[$\square$]
+    When must the model be completed by, e.g.~to help make a decision?
+  \end{itemize}
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Model Scope, Scale and
+Resolution}\label{model-scope-scale-and-resolution}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  The choice of a model's boundaries is closely linked to the choice of
+  how finely to aggregate the behaviour within the model
+  (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}) - what is the
+  intended scale, and resolution of the model (temporal, spatial or
+  otherwise)?
+\item[$\square$]
+  Where is the boundary of the modelled system? Everything outside
+  beyond the boundary and not crossing it is to be ignored within the
+  domain of the model, and everything crossing the boundary is to be
+  treated as external forcing (known/unknown), or else as model outputs
+  (observed, or not, \citeproc{ref-Jakeman:2006ii}{Jakeman et al.,
+  2006}).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Intended application of
+results}\label{intended-application-of-results}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Preregistration Items in this section are relevant to model
+transferability (\citeproc{ref-Yates2018}{Yates et al., 2018}) and
+constraints on generality in model analysis interpretation. How far do
+can the results be extrapolated based on the study design (data + model
++ analysis)? For instance, if there are many confounding variables and
+not enough spatial / environmental replication, then making broader more
+general claims beyond the stated boundaries of the model
+(Section~\ref{sec-analytical-objectives}) may not be warranted. However,
+larger generalisations about results may be acceptable if the data comes
+from experimentally manipulated or controlled systems.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  What is the intended domain in which the model is to be applied? Are
+  there any reasonable extrapolation limits beyond which you expect the
+  model should not be applied (\citeproc{ref-Grimm:2014es}{Grimm et al.,
+  2014})?
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Scenario Analysis
+Operationalisation}\label{scenario-analysis-operationalisation}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item (delete as necessary)}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  How will you operationalise any scenarios identified in
+  Section~\ref{sec-analytical-objectives}? For example, how will you
+  operationalise any qualitative changes of interest, such as ‚
+  `deterioration' or `improvement'?
+\item[$\square$]
+  Describe how you will evaluate and distinguish the performance of
+  alternative scenario outcomes
+\item[$\square$]
+  Justify or otherwise explain how you chose these measures and
+  determined performance criteria in relation to the analytical
+  objectives, model purpose and modelling context, such as the risk
+  attitudes of decision-makers and stakeholders within this system
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Define Conceptual Model}\label{define-conceptual-model}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Conceptual models underpin the formal or quantitative model
+(\citeproc{ref-Cartwright:2016kr}{Cartwright et al., 2016}). The
+conceptual model describes the biological mechanisms relevant to the
+ecological problem and should capture basic premises about how the
+target system works, including any prior knowledge and assumptions about
+system processes. Conceptual models may be represented in a variety of
+formats, such as influence diagrams, linguistic model block diagram or
+bond graphs, and these illustrate how model drivers are linked to both
+outputs or observed responses, and internal (state) variables
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+
+\end{tcolorbox}
+
+\subsection{Choose elicitation and representation
+method}\label{choose-elicitation-and-representation-method}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe what method you will use to elicit or identify the conceptual
+  model. Some common methods include interviews, drawings, and mapping
+  techniques including influence diagrams, cognitive maps and Bayesian
+  belief networks (\citeproc{ref-Moon2019}{Moon et al., 2019}). It is
+  difficult to decide and justify which method is most appropriate, see
+  Moon et al. (\citeproc{ref-Moon2019}{2019}) for guidance addressing
+  this methodological question.
+\item[$\square$]
+  Finally, how do you intend on representing the final conceptual model?
+  This will likely depend on the method chosen to elicit the conceptual
+  model.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Explain Critical Conceptual Design
+Decisions}\label{explain-critical-conceptual-design-decisions}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{List and explain critical conceptual design decisions
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}), including:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  spatial and temporal scales,
+\item[$\square$]
+  selection of entities and processes,
+\item[$\square$]
+  representation of stochasticity and heterogeneity,
+\item[$\square$]
+  consideration of local versus global interactions, environmental
+  drivers, etc.
+\item[$\square$]
+  Explain and justify the influence of particular theories, concepts, or
+  earlier models against alternative conceptual design decisions that
+  might lead to alternative model structures.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Model assumptions and
+uncertainties}\label{model-assumptions-and-uncertainties}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Specify key assumptions and uncertainties underlying the model
+design, describing how uncertainty and variation will be represented in
+the model (\citeproc{ref-Moallemi2019}{Moallemi et al., 2019}). Sources
+of uncertainty may include:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  exogenous uncertainties affecting the system,
+\item[$\square$]
+  parametric uncertainty in input data and
+\item[$\square$]
+  structural / conceptual nonparametric uncertainty in the model.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Identify predictor and response
+variables}\label{identify-predictor-and-response-variables}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+The identification and definition of primary model input variables
+should be driven by scenario definitions, and by the scope of the model
+described in the problem formulation phase
+(\citeproc{ref-Mahmoud2009}{Mahmoud et al., 2009}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{Identify and define system system variables and structures,
+referencing scenario definitions, and the scope of the model as
+described within problem formulation:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  What variables would support taking this action or making this
+  decision?
+\item[$\square$]
+  What additional variables may interact with this system (things we
+  can't control, but can hopefully measure)?
+\item[$\square$]
+  What variables have not been measured, but may interact with the
+  system (often occurs in field or observational studies)?
+\item[$\square$]
+  What variables are index or surrogate measures of variables that we
+  cannot or have not measured?
+\item[$\square$]
+  In what ways do we expect these variables to interact (model
+  structures)?
+\item[$\square$]
+  Explain how any key concepts or terms within problem or
+  decision-making contexts, such as regulatory terms, will be
+  operationalised and defined in a biologically meaningful way to answer
+  the research question appropriately?
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Define prior knowledge, data specification and
+evaluation}\label{define-prior-knowledge-data-specification-and-evaluation}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+This section specifies the plan for collecting, processing and preparing
+data available for parameterisation, determining model structure, and
+for scenario analysis. It also allows the researchers to disclose any
+prior interaction with the data.
+
+\end{tcolorbox}
+
+\subsubsection{Collate available data sources that could be used to
+parameterise or structure the
+model}\label{collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\textbf{For pre-existing data (delete as appropriate):}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Document the identity, quantity and provenance of any data that will
+  be used to develop, identify and test the model.
+\item[$\square$]
+  For each dataset, is the data open or publicly available?
+\item[$\square$]
+  How can the data be accessed? Provide a link or contact as
+  appropriate, indicating any restrictions on the use of data.
+\item[$\square$]
+  Date of download, access, or expected timing offuture access.
+\item[$\square$]
+  Describe the source of the data - what entity originally collected
+  this data? (National Data Set, Private Organisational Data, Own Lab
+  Collection, Other Lab Collection, External Contractor, Meta-Analysis,
+  Expert Elicitation, Other).
+\item[$\square$]
+  Codebook and meta-data. If a codebook or other meta-data is available,
+  link to it here and / or upload the document(s).
+\item[$\square$]
+  Prior work based on this dataset - Have you published / presented any
+  previous work based on this dataset? Include any publications,
+  conference presentations (papers, posters), or working papers
+  (in-prep, unpublished, preprints) based on this dataset you have
+  worked on.
+\item[$\square$]
+  Unpublished Prior Research Activity - Describe any prior but
+  unpublished research activity using these data. Be specific and
+  transparent.
+\item[$\square$]
+  Prior knowledge of the current dataset - Describe any prior knowledge
+  of or interaction with the dataset before commencing this study. For
+  example, have you read any reports or publications about this data?
+\item[$\square$]
+  Describe how the data is arranged, in terms of replicates and
+  covariates.
+\end{itemize}
+
+\textbf{Sampling Plan (for data you will collect, delete as
+appropriate):}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Data collection procedures - Please describe your data collection
+  process, including how sites and transects or any other physical unit
+  were selected and arranged. Describe any inclusion or exclusion rules,
+  and the study timeline.
+\item[$\square$]
+  Sample Size - Describe the sample size of your study.
+\item[$\square$]
+  Sample Size Rationale - Describe how you determined the appropriate
+  sample size for your study. It could include feasibility constraints,
+  such as time, money or personnel.
+\item[$\square$]
+  If sample size cannot be specified, specify a stopping rule - i.e.~how
+  will you decide when to terminate your data collection?
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Data Processing and
+Preparation}\label{data-processing-and-preparation}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe any data preparation and processing steps, including
+  manipulation of environmental layers (e.g.~standardisation and
+  geographic projection) or variable construction (e.g.~Principal
+  Component Analysis).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Describe any data exploration or preliminary data
+analyses.}\label{describe-any-data-exploration-or-preliminary-data-analyses.}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+In most modelling cases, it is necessary to perform preliminary analyses
+to understand the data and check that assumptions and requirements of
+the chosen modelling procedures are met. Data exploration prior to model
+fitting or development may include exploratory analyses to check for
+collinearity, spatial and temporal coverage, quality and resolution,
+outliers, or the need for transformations
+(\citeproc{ref-Yates2018}{Yates et al., 2018}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{For each separate preliminary or investigatory analysis:}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  State what needs to be known to proceed with further decision-making
+  about the modelling procedure, and why the analysis is necessary.
+\item[$\square$]
+  Explain how you will implement this analysis, as well as any
+  techniques you will use to summarise and explore your data.
+\item[$\square$]
+  What method will you use to represent this analysis (graphical,
+  tabular, or otherwise, describe)
+\item[$\square$]
+  Specify exactly which parts of the data will be used
+\item[$\square$]
+  Describe how the results will be interpreted, listing each potential
+  analytic decision, as well as the analysis finding that will trigger
+  each decision, where possible.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Data evaluation, exclusion and missing
+data}\label{data-evaluation-exclusion-and-missing-data}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Documenting issues with reliability is important because data quality
+and ecological relevance might be constrained by measurement error,
+inappropriate experimental design, and heterogeneity and variability
+inherent in ecological systems (\citeproc{ref-Grimm:2014es}{Grimm et
+al., 2014}). Ideally, model input data should be internally consistent
+across temporal and spatial scales and resolutions, and appropriate to
+the problem at hand (\citeproc{ref-Mahmoud2009}{Mahmoud et al., 2009}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe how you will determine how reliable the data is for the given
+  model purpose. Ideally, model input data should be internally
+  consistent across temporal and spatial scales and resolutions, and
+  appropriate to the problem at hand
+\item[$\square$]
+  Document any issues with data reliability.
+\item[$\square$]
+  How will you determine what data, if any, will be excluded from your
+  analyses?
+\item[$\square$]
+  How will outliers be handled? Describe rules for identifying outlier
+  data, and for excluding a site, transect, quadrat, year or season,
+  species, trait, etc.
+\item[$\square$]
+  How will you identify and deal with incomplete or missing data?
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Conceptual model
+evaluation}\label{conceptual-model-evaluation}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe how your conceptual model will be critically evaluated.
+  Evaluation includes both the completeness and suitability of the
+  overall model structure.
+\item[$\square$]
+  How will you critically assess any simplifying assumptions
+  (\citeproc{ref-Augusiak:2014gz}{Augusiak et al., 2014})?
+\item[$\square$]
+  Will this process will include consultation or feedback from a client,
+  manager, or model user.
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Formalise and Specify Model}\label{formalise-and-specify-model}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+In this section describe what quantitative methods you will use to build
+the model/s, explain how they are relevant to the client/manager/user's
+purpose.
+
+\end{tcolorbox}
+
+\subsection{Model class, modelling framework and
+approach}\label{model-class-modelling-framework-and-approach}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Modelling approaches can be described as occurring on a spectrum from
+correlative or phenomenological to mechanistic or process-based
+(\citeproc{ref-Yates2018}{Yates et al., 2018}); where correlative models
+use mathematical functions fitted to data to describe underlying
+processes, and mechanistic models explicitly represent processes and
+details of component parts of a biological system that are expected to
+give rise to the data (\citeproc{ref-White2019a}{White \& Marshall,
+2019}). A model `class,' `family'\,' or `type' is often used to describe
+a set of models each of which has a distinct but related sampling
+distribution (\citeproc{ref-Liu2008}{C. C. Liu \& Aitkin, 2008}). The
+model family is driven by choices about the types of variables covered
+and the nature of their treatment, as well as structural features of the
+model, such as link functions, spatial and temporal scales of processes
+and their interactions (\citeproc{ref-Jakeman:2006ii}{Jakeman et al.,
+2006}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe what modelling framework, approach or class of model you will
+  use to implement your model and relate your choice to the model
+  purpose and analytical objectives described in
+  Section~\ref{sec-model-purpose-context-and-problem-context} and
+  Section~\ref{sec-analytical-objectives}.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Choose model features and
+family}\label{choose-model-features-and-family}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+All modelling approaches require the selection of model features, which
+conform with the conceptual model and data specified in previous steps
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). The choice of
+model are determined in conjunction with features are selected. Model
+features include elements such as the functional form of interactions,
+data structures, measures used to specify links, any bins or
+discretisation of continuous variables. It is usually difficult to
+change fundamental features of a model beyond an early stage of model
+development, so careful thought and planning here is useful to the
+modeller (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). However,
+if changes to these fundamental aspects of the model do need to change,
+document how and why these choices were made, including any results used
+to support any changes in the model.
+
+\end{tcolorbox}
+
+\subsubsection{Operationalising Model
+Variables}\label{operationalising-model-variables}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  For each response, predictor, and covariate, specify how these
+  variables will be operationalised in the model. This should relate
+  directly to the analytical and/or management objectives specified
+  during the problem formulation phase. Operationalisations could
+  include: the extent of a response, an extreme value, a trend, a
+  long-term mean, a probability distribution, a spatial pattern, a
+  time-series, qualitative change, such as a direction of change or, the
+  frequency, location, or probability of some event occuring. Specify
+  any treatment of model variables, including whether they are lumped /
+  distributed, lienar / non-linear, stochastic / deterministic
+  (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+\item[$\square$]
+  Provide a rationale for your choices, including why plausible
+  alternatives under consideration were not chosen, and relate your
+  justification bacj to the purpose, objectives, prior knowledge and or
+  logistical constraints specified in the problem formulation phase
+  (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Choose model family}\label{choose-model-family}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify which family of statistical distributions you will use in your
+  model, and describe any transformations, or link functions.
+\item[$\square$]
+  Include in your rational for selection, detail about which variables
+  the model outputs are likely sensitive to, what aspects of their
+  behaviour are important, and any associated spatial or temporal
+  dimensions in sampling.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{\texorpdfstring{Describe \emph{approach} for identifying
+model
+structure}{Describe approach for identifying model structure}}\label{describe-approach-for-identifying-model-structure}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+This section relates to the process of determining the best/most
+efficient/parsimonious representation of the system at the appropriate
+scale of concern (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006})
+that best meets the analytical objectives specified in the problem
+formulation phase. Model structure refers to the choice of variables
+included in the model, and the nature of the relationship among those
+variables. Approaches to finding model structure and parameters may be
+knowledge-supported, or data-driven (\citeproc{ref-Boets:2015gl}{Boets
+et al., 2015}). Model selection methods can include traditional
+inferential approaches such as unconstrained searches of a dataset for
+patterns that explain variations in the response variable, or use of
+ensemble-modelling methods (\citeproc{ref-Barnard2019}{Barnard et al.,
+2019}). Ensemble modelling procedures might aim to derive a single
+model, or a multi-model average (\citeproc{ref-Yates2018}{Yates et al.,
+2018}). Refining actions to develop a model could include iteratively
+dropping parameters or adding them, or aggregating / disaggregating
+system descriptors, such as dimensionality and processes
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify what approach and methods you will use to identify model
+  structure and parameters.
+\item[$\square$]
+  If using a knowledge-supported approach to deriving model structure
+  (either in whole or in part), specify model structural features,
+  including:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the functional form of interactions (if any)
+  \item
+    data structures,
+  \item
+    measures used to specify links,
+  \item
+    any bins or discretisation of continuous variables
+    (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}),
+  \item
+    any other relevant features of the model structure.
+  \end{itemize}
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Describe parameter estimation technique and performance
+criteria}\label{describe-parameter-estimation-technique-and-performance-criteria}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Before calibrating the model to the data, the performance criteria for
+judging the calibration (or model fit) are specified. These criteria and
+their underlying assumptions should reflect the desired properties of
+the parameter estimates / structure
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). For example,
+modellers might seek parameter estimates that are robust to outliers,
+unbiased, and yield appropriate predictive performance. Modellers will
+need to consider whether the assumptions of the estimation technique
+yielding those desired properties are suited to the problem at hand. For
+integrated or sub-divided models, other considerations might include
+choices about where to disaggregate the model for parameter estimation;
+e.g.~spatial sectioning (streams into reaches) and temporal sectioning
+(piece-wise linear models) (\citeproc{ref-Jakeman:2006ii}{Jakeman et
+al., 2006}).
+
+\end{tcolorbox}
+
+\subsubsection{Parameter estimation
+technique}\label{parameter-estimation-technique}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify what technique you will use to estimate parameter values, and
+  how you will supply non-parametric variables and/or data
+  (e.g.~distributed boundary conditions). For example, will you
+  calibrate all variables simultaneously by optimising fit of model
+  outputs to observations, or will you parameterise the model in a
+  piecemeal fashion by either direct measurement, inference from
+  secondary data, or some combination
+  (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+\item[$\square$]
+  Identify which variables will be parameterised directly, such as by
+  expert elicitation or prior knowledge.
+\item[$\square$]
+  Specify which algorithm(s) you will use for any data-driven parameter
+  estimation, including supervised, or unsupervised machine learning,
+  decision-tree, K-nearest neighbour or cluster algorithms
+  (\citeproc{ref-Liu2018b}{Z. Liu et al., 2018}).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Parameter estimation / model fit performance
+criteria}\label{sec-parameter-model-fit-performance-criteria}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify which suite of performance criteria you will use to judge the
+  performance of the model. Examples include correlation scores,
+  coefficient of determination, specificity, sensitivity, AUC, etcetera
+  (\citeproc{ref-Yates2018}{Yates et al., 2018}).
+\item[$\square$]
+  Relate any underlying assumptions of each criterion to the desired
+  properties of the model, and justify the choice of performance metric
+  in relation
+\item[$\square$]
+  Explain how you will identify which model features or components are
+  significant or meaningful.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Model assumptions and
+uncertainties}\label{model-assumptions-and-uncertainties-1}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify assumptions and key uncertainties in the formal model.
+  Describe what gaps exist between the model conception, and the
+  real-world problem, what biases might this introduce and how might
+  this impact any interpretation of the model outputs, and what
+  implications are there for evaluating model-output to inform
+  inferences or decisions?
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Specify formal model(s)}\label{specify-formal-models}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Once critical decisions have been made about the modelling approach and
+method of model specification, the conceptual model is translated into
+the quantitative model.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify all formal models
+
+  \begin{itemize}
+  \tightlist
+  \item[$\square$]
+    Note, For data-driven approaches to determining model structure and
+    or parameterisation, it may not be possible to respond to this
+    preregistration item. In such cases, explain why this is the case,
+    and how you will document the model(s) used in the final analysis.
+  \end{itemize}
+\item[$\square$]
+  For quantitative model selection approaches, including ensemble
+  modelling, specify each model used in the candidate set, including any
+  null or full/global model.
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Model Calibration, Validation \&
+Checking}\label{model-calibration-validation-checking}
+
+\subsection{Model calibration and validation
+scheme}\label{model-calibration-and-validation-scheme}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+This section pertains to any data calibration, validation or testing
+schemes that will be implemented. For example, the model may be tested
+on data independent of those used to parameterise the model (external
+validation), or the model may be cross-validated on random sub-samples
+of the data used to parameterise the model
+(\citeproc{ref-Barnard2019}{Barnard et al., 2019}; internal
+cross-validation \citeproc{ref-Yates2018}{Yates et al., 2018}). For some
+types of models, hyper-parameters are estimated from data, and may be
+tuned on further independent holdouts of the training data (``validation
+data'').
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe any data calibration, validation and testing scheme you will
+  implement, including any procedures for tuning or estimating model
+  hyper-parameters (if any).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Describe calibration/validation
+data}\label{describe-calibrationvalidation-data}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation \& Rationale}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+The following items pertain to properties of the \emph{datasets} used
+for calibration (training), validation, and testing.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{If partitioning data for cross-validation or similar approach
+(delete as needed):}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe the approach specifying the number of folds that will be
+  created, the relative size of each fold, and any stratification
+  methods used for ensuring evenness of groups between folds and between
+  calibration / validation data?
+\end{itemize}
+
+\emph{If using external / independent holdout data for model testing and
+evaluation (delete as needed):}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Which data will be used as a the testing data? What method will you be
+  used for generating training / test data subsets?
+\item[$\square$]
+  Describe any known differences between the training/validation and
+  testing datasets, the relative size of each, as well as any
+  stratification methods used for ensuring evenness of groups between
+  data sets?
+\item[$\square$]
+  It is preferable that any independent data used for model testing
+  remains unknown to modellers during the process of model development,
+  please describe the relationship modellers have to model validation
+  data, will independent datasets be known or accessible to any modeller
+  or analyst?
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Implementation
+verification}\label{implementation-verification}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation \& Examples}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Model implementation verification is the process of ensuring that the
+model has been correctly implemented, and that the model performs as
+described by the model description (\citeproc{ref-Grimm:2014es}{Grimm et
+al., 2014}). This process is distinct from model checking, which
+assesses the model's performance in representing the system of interest
+(\citeproc{ref-Conn:2018hd}{Conn et al., 2018}).
+
+\begin{itemize}
+\tightlist
+\item
+  Checks for verification implementation should include i) thoroughly
+  checking for bugs or programming errors, and ii) whether the
+  implemented model performs as described by the model description
+  (\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}).
+\item
+  Qualitative tests could include syntax checking of code, and peer-code
+  review (\citeproc{ref-ivimey2023}{Ivimey et al., 2023}). Technical
+  measures include using unit tests, or in-built checks within functions
+  to prevent potential errors.
+\end{itemize}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  What Quality Assurance measures will you take to verify the model has
+  been correctly implemented? Specifying a priori quality assurance
+  tests for implementation verification may help to avoid selective
+  debugging and silent errors.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Model checking}\label{model-checking}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Rationale \& Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+``Model Checking'' goes by many names (``conditional verification'',
+``quantitative verification'', ``model output verification'' ), and
+refers to a series of analyses that assess a model's performance in
+representing the system of interest (\citeproc{ref-Conn:2018hd}{Conn et
+al., 2018}). Model checking aids in diagnosing assumption violations,
+and reveals where a model might need to be altered to better represent
+the data, and therefore system (\citeproc{ref-Conn:2018hd}{Conn et al.,
+2018}). Quantitative model checking diagnostics include goodness of fit,
+tests on residuals or errors, such as for heteroscedascity,
+cross-correlation, and autocorrelation
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+
+\end{tcolorbox}
+
+\subsubsection{Quantitative model
+checking}\label{quantitative-model-checking}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{During this process, observed data, or data and patterns that
+guided model design and calibration, are compared to model output in
+order to identify if and where there are any systematic differences.}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify any diagnostics or tests you will use during model checking to
+  assess a model's performance in representing the system of interest.
+\item[$\square$]
+  For each test, specify the criteria that will you use to interpret the
+  outcome of the test in assessing the model's ability to sufficiently
+  represent the gathered data used to develop and parameterise the
+  model.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Qualitative model
+checking}\label{qualitative-model-checking}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+This step is largely informal and case-specific, but requires‚ `face
+validation' with model users / clients / managers who aren't involved in
+the development of the model to assess whether the interactions and
+outcomes of the model are feasible an defensible
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}). This process is
+sometimes called a ‚``laugh test'' or a ``pub test'' and in addition to
+checking the model's believability, it builds the client's confidence in
+the model (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). Face
+validation could include structured walk-throughs, or presenting
+descriptions, visualisations or summaries of model results to experts
+for assessment.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Briefly explain how you will qualitatively check the model, and
+  whether and how you will include users and clients in the process.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Assumption Violation
+Checks}\label{assumption-violation-checks}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\emph{The consequences of assumption violations on the interpretation of
+results should be assessed (\citeproc{ref-Araujo2019}{Araújo et al.,
+2019}).}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Explain how you will demonstrate robustness to model assumptions and
+  check for violations of model assumptions.
+\item[$\square$]
+  If you cannot perform quantitative assumption checks, describe what
+  theoretical justifications would justify a lack of violation of or
+  robustness to model assumptions.
+\item[$\square$]
+  If you cannot demonstrate or theoretically justify violation or
+  robustness to assumptions, explain why not, and specify whether you
+  will discuss assumption violations and their consequences for
+  interpretation of model outputs.
+\item[$\square$]
+  If assumption violations cannot be avoided, explain how you will
+  explore the consequences of assumption violations on the
+  interpretation of results (To be completed in interim iterations of
+  the preregistration, only if there are departures from assumptions as
+  demonstrated in the planned tests above).
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Model Validation and
+Evaluation}\label{model-validation-and-evaluation}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+The model validation \& evaluation phase comprises a suite of analyses
+that collectively inform inferences about whether, and under what
+conditions, a model is suitable to meet its intended purpose
+(\citeproc{ref-Augusiak:2014gz}{Augusiak et al., 2014}). Errors in
+design and implementation of the model and their implication on the
+model output are assessed. Ideally independent data is used against the
+model outputs to assess whether the model output behaviour exhibits the
+required accuracy for the model's intended purpose. The outcomes of
+these analyses build confidence in the model applications and increase
+understanding of model strengths and limitations. Model evaluation
+including, model analysis, should complement model checking. It should
+evaluate model checking, and consider over-fitting and extrapolation.
+The higher the proportion of calibrated, or uncertain parameters, ``the
+greater the risk that the model seems to work correctly, but for the
+wrong reasons'' (citaiton). Evaluation thus complements model checking
+because we can rule out the chance that the model fits the calibration
+data well, but has not captured the relevant ecological mechanisms of
+the system pertinent to the research question or the decision problem
+underpinning the model (\citeproc{ref-Grimm:2014es}{Grimm et al.,
+2014}). Evaluation of model outputs against external data in conjunction
+with the results from model checking provide information about the
+structural realism and therefore credibility of the model
+(\citeproc{ref-Grimm2016}{Grimm \& Berger, 2016}).
+
+\end{tcolorbox}
+
+\subsection{Model output
+corroboration}\label{model-output-corroboration}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Ideally, model outputs or predictions are compared to independent data
+and patterns that were not used to develop, parameterise, or verify the
+model. Testing against a dataset of response and predictor variables
+that are spatially and/or temporally independent from the training
+dataset minimises the risk of artificially inflating model performance
+measures (\citeproc{ref-Araujo2019}{Araújo et al., 2019}). Although the
+corroboration of model outputs against an independent validation dataset
+is considered the `gold standard' for showing that a model properly
+represents the internal organisation of the system, model validation is
+not always possible because empirical experiments are infeasible or
+model users are working on rapid-response time-frames, hence, why
+ecologists often model in the first place
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}). Independent
+predictions might instead be tested on sub-models. Alternatively,
+patterns in model output that are robust and seem characteristic of the
+system can be identified and evaluated in consultation with the
+literature or by experts to judge how accurate the model output is
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  State whether you will corroborate the model outputs on external data,
+  and document any independent validation data in step.
+\item[$\square$]
+  It is preferable that any independent data used for model evaluation
+  remains unknown to modellers during the process of model building
+  (\citeproc{ref-Dwork2015}{Dwork et al., 2015}), describe the
+  relationship modellers have to model validation data, e.g.~will
+  independent datasets be known to any modeller or analyst involved in
+  the model building process?
+\item[$\square$]
+  If unable to evaluate the model outputs against independent data,
+  explain why and explain what steps you will take to interrogate the
+  model.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Choose performance metrics and
+criteria}\label{choose-performance-metrics-and-criteria}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Model performance can be quantified by a range of tests, including
+measures of agreement between predictions and independent observations,
+or estimates of accuracy, bias, calibration, discrimination refinement,
+resolution and skill (\citeproc{ref-Araujo2019}{Araújo et al., 2019}).
+Note that the performance metrics and criteria in this section are used
+for evaluating the structured and parameterised models (ideally) on
+independent holdout data, so this step is additional to any performance
+criteria used for determining model structure or parameterisation
+(Section~\ref{sec-parameter-model-fit-performance-criteria}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify what performance measures you will use to evaluate the model
+  and briefly explain how each test relates to different desired
+  properties of a model's performance.
+\item[$\square$]
+  Spatial, temporal and environmental pattern of errors and variance can
+  change the interpretation of model predictions and conservation
+  decisions (\citeproc{ref-Araujo2019}{Araújo et al., 2019}), where
+  relevant and possible, describe how you will characterise and report
+  the spatial, temporal and environmental pattern of errors and
+  variance.
+\item[$\square$]
+  If comparing alternative models, specify what measures of model
+  comparison or out-of-sample performance metrics will you use to find
+  support for alternative models or else to optimise predictive ability.
+  State what numerical threshold or qualities you will use for each of
+  these metrics.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsection{Model analysis}\label{model-analysis}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Rationale \& Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Uncertainty in models arises due to incomplete system understanding
+(which processes to include, or which interact), from imprecise, finite
+and sparese data measurements, and from uncertainty in input conditions
+and scenarios for model simulations or runs
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}). Non-technical
+uncertainties can also be introduced throughout the modellign process,
+such as uncertainties arising from issues in problem-framing,
+indeterminicies, and modeller / client values
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+
+The purpose of model analysis is to prevent blind trust in the model by
+understanding how model outputs have emerged, and to `challenge' the
+model by verifying whether the model is still believable and fit for
+purpose if one or more parameters are changed
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}).
+
+Model analysis should increase understanding of the model behaviour by
+identifying which processes and process interactions explain
+characteristic behaviours of the model system. Model analysis typically
+consists of sensitivity analyses preceded by uncertainty analyses
+(\citeproc{ref-Saltelli2019}{Saltelli et al., 2019}), and a suite of
+other simulation or other computational experiments. The aim of such
+computational experiments is to increase understanding of the model
+behaviour by identifying which processes and process interactions
+explain characteristic behaviours of the model system
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014}). Uncertainty analyses
+and sensitivity analyses augment one another to draw conclusions about
+model uncertainty.
+
+Because the results from a full suite of sensitivity analysis and
+uncertainty analysis can be difficult to interpret due to the number and
+complexity of causal relations examined
+(\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}), it is useful for
+the analyst to relate the choice of analysis to the modelling context,
+purpose and analytical objectives defined in the problem formulation
+phase, in tandem with any critical uncertainties that have emerged
+during model development and testing prior to this point.
+
+\end{tcolorbox}
+
+\subsubsection{Uncertainty Analyses}\label{uncertainty-analyses}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Uncertainty can arise from different modelling techniques, response data
+and predictor variables (\citeproc{ref-Araujo2019}{Araújo et al.,
+2019}). Uncertainty analyses characterise the uncertainty in model
+outputs, and identify how uncertainty in model parameters affects
+uncertainty in model output, but does not identify which model
+assumptions are driving this behaviour
+(\citeproc{ref-Grimm:2014es}{Grimm et al., 2014};
+\citeproc{ref-Saltelli2019}{Saltelli et al., 2019}). Uncertainty
+analyses can include propagating known uncertainties through the model,
+or by investigating the effect of different model scenarios with
+different parameters and modelling technique combinations
+(\citeproc{ref-Araujo2019}{Araújo et al., 2019}), for example. It could
+also include characterising the output distribution, such as through
+empirical construction using model output data points. It could also
+include extracting summary statistics like the mean, median and variance
+from this distribution, and perhaps constructing confidence intervals on
+the mean (\citeproc{ref-Saltelli2019}{Saltelli et al., 2019}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Please describe how you will characterise model and data
+  uncertainties, e.g.~propagating known uncertainties through the model,
+  investigating the effect of different model scenarios with different
+  parameters and modelling technique combinations
+  (\citeproc{ref-Araujo2019}{Araújo et al., 2019}), or empirically
+  constructing model distributions from model output data points, and
+  extracting summary statistics, including the mean, median, variance,
+  and constructing confidence intervals
+  (\citeproc{ref-Saltelli2019}{Saltelli et al., 2019}).
+\item[$\square$]
+  Relate your choice of analysis to the context and purposes of the
+  model described in the problem formulation phase. For instance ‚
+  discrepancies between model output and observed output may be
+  important for forecasting models, where cost, benefit, an risk over a
+  substantial period must be gauged, but much less critical for
+  decision-making or management models where the user may be satisfied
+  with knowing that the predicted ranking order of impacts of
+  alternative scenarios or management options is likely to be correct,
+  with only a rough indication of their sizes''
+  (\citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}).
+\item[$\square$]
+  Briefly describe how you will summarise the results of these in silico
+  experiments with graphical, tabular, or other devices, such as summary
+  statistics.
+\item[$\square$]
+  If the chosen modelling approach is able to explicitly articulate
+  uncertainty due to data, measurements or baseline conditions, such as
+  by providing estimates of uncertainty (typically in the form of
+  probabilistic parameter covariance,
+  \citeproc{ref-Jakeman:2006ii}{Jakeman et al., 2006}), specify which
+  measure of uncertainty you will use.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Sensitivity analyses}\label{sensitivity-analyses}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Explanation}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm]
+
+Sensitivity analysis examines how uncertainty in model outputs can be
+apportioned to different sources of uncertainty in model input
+(\citeproc{ref-Saltelli2019}{Saltelli et al., 2019}).
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe the sensitivity analysis approach you will take:
+  deterministic sensitivity, stochastic sensitivity (variability in the
+  model), or scenario sensitivity (effect of changes based on
+  scenarios).
+\item[$\square$]
+  Describe any sensitivity analyses you will conduct by specifying which
+  parameters will be held constant, which will be varied, and the range
+  and intervals of values over which those parameters will be varied.
+\item[$\square$]
+  State the primary objective of each sensitivity analysis, for example,
+  to identify which input variables contribute the most to model
+  uncertainty so that these variables can be targeted for further data
+  collection, or alternatively to identify which variables or factors
+  contribute little to overall model outputs, and so can be `dropped'
+  from future iterations of the model
+  (\citeproc{ref-Saltelli2019}{Saltelli et al., 2019}).
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Model application or scenario
+analysis}\label{model-application-or-scenario-analysis}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Specify any input conditions and relevant parameter values for initial
+  environmental conditions and decision-variables under each scenario
+  specified in Section~\ref{sec-problem-formulation}.
+\item[$\square$]
+  Describe any other relevant technical details of model application,
+  such as methods for how you will implement any simulations or model
+  projections.
+\item[$\square$]
+  What raw and transformed model outputs will you extract from the model
+  simulations or projections, and how will you map, plot, or otherwise
+  display and synthesise the results of scenario and model analyses.
+\item[$\square$]
+  Explain how you will analyse the outputs to answer your analytical
+  objectives. For instance, describe any trade-off or robustness
+  analyses you will undertake to help evaluate and choose between
+  different alternatives in consultation with experts or
+  decision-makers.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection{Other simulation experiments / robustness
+analyses}\label{other-simulation-experiments-robustness-analyses}
+
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, opacitybacktitle=0.6, breakable, toptitle=1mm, rightrule=.15mm, titlerule=0mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Preregistration Item}, colback=white, arc=.35mm, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm]
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Describe any other simulation experiments, robustness analyses or
+  other analyses you will perform on the model, including any metrics
+  and their criteria / thresholds for interpreting the results of the
+  analysis.
+\end{itemize}
+
+\end{tcolorbox}
+
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-Araujo2019}
+Araújo, M., Anderson, R., Márcia Barbosa, A., Beale, C., Dormann, C.,
+Early, R., Garcia, R., Guisan, A., Maiorano, L., Naimi, B., O'Hara, R.,
+Zimmermann, N., \& Rahbek, C. (2019). Standards for distribution models
+in biodiversity assessments. \emph{Sci Adv}, \emph{5}(1), eaat4858.
+
+\bibitem[\citeproctext]{ref-Augusiak:2014gz}
+Augusiak, J., Van den Brink, P. J., \& Grimm, V. (2014). Merging
+validation and evaluation of ecological models to {``evaludation''}: A
+review of terminology and a practical approach. \emph{Ecological
+Modelling}, \emph{280}, 117--128.
+
+\bibitem[\citeproctext]{ref-Barnard2019}
+Barnard, D. M., Germino, M. J., Pilliod, D. S., Arkle, R. S.,
+Applestein, C., Davidson, B. E., \& Fisk, M. R. (2019). Can't see the
+random forest for the decision trees: Selecting predictive models for
+restoration ecology. \emph{Restoration Ecology}.
+
+\bibitem[\citeproctext]{ref-Boets:2015gl}
+Boets, P., Landuyt, D., Everaert, G., Broekx, S., \& Goethals, P. L. M.
+(2015). \emph{Evaluation and comparison of data-driven and
+knowledge-supported bayesian belief networks to assess the habitat
+suitability for alien macroinvertebrates}. \emph{74}, 92--103.
+
+\bibitem[\citeproctext]{ref-Cartwright:2016kr}
+Cartwright, S. J., Bowgen, K. M., Collop, C., Hyder, K., Nabe-Nielsen,
+J., Stafford, R., Stillman, R. A., Thorpe, R. B., \& Sibly, R. M.
+(2016). Communicating complex ecological models to non-scientist end
+users. \emph{Ecological Modelling}, \emph{338}, 51--59.
+
+\bibitem[\citeproctext]{ref-Conn:2018hd}
+Conn, P. B., Johnson, D. S., Williams, P. J., Melin, S. R., \& Hooten,
+M. B. (2018). A guide to bayesian model checking for ecologists.
+\emph{Ecological Monographs}, \emph{9}, 341--317.
+
+\bibitem[\citeproctext]{ref-Dwork2015}
+Dwork, C., Feldman, V., Hardt, M., Pitassi, T., Reingold, O., \& Roth,
+A. (2015). The reusable holdout: Preserving validity in adaptive data
+analysis. \emph{Science}, \emph{349}(6248), 636--638.
+\url{https://doi.org/10.1126/science.aaa9375}
+
+\bibitem[\citeproctext]{ref-Fraser:2017jf}
+Fraser, H., Rumpff, L., Yen, J. D. L., Robinson, D., \& Wintle, B. A.
+(2017). Integrated models to support multiobjective ecological
+restoration decisions. \emph{Conservation Biology}, \emph{31}(6),
+1418--1427.
+
+\bibitem[\citeproctext]{ref-Gould2024a}
+Gould, E., Jones, C., Yen, J. D. L., Fraser, H., Wootton, H., Vivian,
+L., Good, M., Duncan, D., Rumpff, L., \& Fidler, F. (2024).
+\emph{EcoConsPreReg: A guide to adaptive preregistration for model-based
+research in ecology and conservation}.
+\url{https://doi.org/10.5281/ZENODO.10807029}
+
+\bibitem[\citeproctext]{ref-Grimm:2014es}
+Grimm, V., Augusiak, J., Focks, A., Frank, B. M., Gabsi, F., Johnston,
+A. S. A., Liu, C., Martin, B. T., Meli, M., Radchuk, V., Thorbek, P., \&
+Railsback, S. F. (2014). Towards better modelling and decision support:
+Documenting model development, testing, and analysis using TRACE.
+\emph{Ecological Modelling}, \emph{280}, 129--139.
+
+\bibitem[\citeproctext]{ref-Grimm2016}
+Grimm, V., \& Berger, U. (2016). Structural realism, emergence, and
+predictions in next-generation ecological modelling: Synthesis from a
+special issue. \emph{Ecological Modelling}, \emph{326}, 177--187.
+\url{https://doi.org/10.1016/j.ecolmodel.2016.01.001}
+
+\bibitem[\citeproctext]{ref-ivimey2023}
+Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., Gould, E.,
+Grainger, M., Marshall, B. M., Moreau, D., Paquet, M., Royauté, R.,
+Sánchez, A., Silva, I., \& Windecker, S. M. (2023). Implementing code
+review in the scientific workflow: Insights from ecology and
+evolutionary biology. \emph{Journal of Evolutionary Biology}.
+https://doi.org/\url{https://doi.org/10.1111/jeb.14230}
+
+\bibitem[\citeproctext]{ref-Jakeman:2006ii}
+Jakeman, A. J., Letcher, R. A., \& Norton, J. P. (2006). Ten iterative
+steps in development and evaluation of environmental models.
+\emph{Environmental Modelling \& Software}, \emph{21}(5), 602--614.
+
+\bibitem[\citeproctext]{ref-Liu2008}
+Liu, C. C., \& Aitkin, M. (2008). Bayes factors: Prior sensitivity and
+model generalizability. \emph{Journal of Mathematical Psychology},
+\emph{52}(6), 362--375. \url{https://doi.org/10.1016/j.jmp.2008.03.002}
+
+\bibitem[\citeproctext]{ref-Liu2018b}
+Liu, Z., Peng, C., Work, T., Candau, J.-N., DesRochers, A., \& Kneeshaw,
+D. (2018). Application of machine-learning methods in forest ecology:
+Recent progress and future challenges. \emph{Environmental Reviews},
+\emph{26}(4), 339--350.
+
+\bibitem[\citeproctext]{ref-Mahmoud2009}
+Mahmoud, M., Liu, Y., Hartmann, H., Stewart, S., Wagener, T., Semmens,
+D., Stewart, R., Gupta, H., Dominguez, D., Dominguez, F., Hulse, D.,
+Letcher, R., Rashleigh, B., Smith, C., Street, R., Ticehurst, J., Twery,
+M., Delden, H. van, Waldick, R., \ldots{} Winter, L. (2009). A formal
+framework for scenario development in support of environmental
+decision-making. \emph{Environmental Modelling \& Software},
+\emph{24}(7), 798--808.
+
+\bibitem[\citeproctext]{ref-McCarthy2011}
+McCarthy, M. A., Thompson, C. J., Moore, A. L., \& Possingham, H. P.
+(2011). Designing nature reserves in the face of uncertainty.
+\emph{Ecology Letters}, \emph{14}(5), 470--475.
+\url{https://doi.org/10.1111/j.1461-0248.2011.01608.x}
+
+\bibitem[\citeproctext]{ref-McDonald-Madden2008}
+McDonald-Madden, E., Baxter, P. W. J., \& Possingham, H. P. (2008).
+Making robust decisions for conservation with restricted money and
+knowledge. \emph{Journal of Applied Ecology}, \emph{45}(6), 1630--1638.
+
+\bibitem[\citeproctext]{ref-Moallemi2019}
+Moallemi, E. A., Elsawah, S., \& Ryan, M. J. (2019). Strengthening
+{``good''} modelling practices in robust decision support: A reporting
+guideline for combining multiple model-based methods. \emph{Mathematics
+and Computers in Simulation}.
+
+\bibitem[\citeproctext]{ref-Moon2019}
+Moon, K., Guerrero, A. M., Adams, Vanessa. M., Biggs, D., Blackman, D.
+A., Craven, L., Dickinson, H., \& Ross, H. (2019). Mental models for
+conservation research and practice. \emph{Conservation Letters},
+\emph{12}(3), e12642.
+
+\bibitem[\citeproctext]{ref-Saltelli2019}
+Saltelli, A., Aleksankina, K., Becker, W., Fennell, P., Ferretti, F.,
+Holst, N., Li, S., \& Wu, Q. (2019). Why so many published sensitivity
+analyses are false: A systematic review of sensitivity analysis
+practices. \emph{Environmental Modelling \& Software}, \emph{114},
+29--39.
+
+\bibitem[\citeproctext]{ref-White2019a}
+White, C. R., \& Marshall, D. J. (2019). Should we care if models are
+phenomenological or mechanistic. \emph{Trends in Ecology \& Evolution},
+\emph{34}(4), 276--278.
+
+\bibitem[\citeproctext]{ref-Yates2018}
+Yates, K., Bouchet, P., Caley, M., Mengersen, K., Randin, C., Parnell,
+S., Fielding, A., Bamford, A., Ban, S., Barbosa, A., Dormann, C., Elith,
+J., Embling, C., Ervin, G., Fisher, R., Gould, S., Graf, R., Gregr, E.,
+Halpin, P., \ldots{} Sequeira, A. (2018). Outstanding challenges in the
+transferability of ecological models. \emph{Trends Ecol. Evol. (Amst.)},
+\emph{33}(10), 790--802.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
