@@ -142,7 +142,7 @@ The scope of the model includes temporal and spatial resolutions, which should a
 -   [ ] Describe the decision-making context in which the model will be used (if relevant).
 :::
 
-### Model purpose, context and problem context
+### Model purpose, context and problem context {#sec-model-purpose-context-and-problem-context}
 
 ::: callout-caution
 ## Preregistration Item
@@ -155,7 +155,7 @@ The scope of the model includes temporal and spatial resolutions, which should a
 -   [ ] Ensure that you specify any focal taxa and study objectives.
 :::
 
-### Analytical objectives {#analyticalobjectives}
+### Analytical objectives {#sec-analytical-objectives}
 
 ::: {.callout-note collapse="true"}
 ## Explanation
