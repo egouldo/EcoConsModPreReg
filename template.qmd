@@ -160,7 +160,7 @@ The scope of the model includes temporal and spatial resolutions, which should a
 ::: {.callout-note collapse="true"}
 ## Explanation
 
-How will the model be analysed, what analytical questions will the model be used to answer? For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement. Other examples from ecological decision-making include: to compare the performance of alternative management actions under budget constraint [@Fraser:2017jf] to search for robust decisions under uncertainty [@McDonald-Madden2008], to choose the conservation policy that minimises uncertainty \[insert ref\]. See other examples in [@Moallemi2019].
+How will the model be analysed, what analytical questions will the model be used to answer? For example, you might be using your model in a scenario analysis to determine which management decision is associated with minimum regret or the highest likelihood of improvement. Other examples from ecological decision-making include: to compare the performance of alternative management actions under budget constraint [@Fraser:2017jf], to search for robust decisions under uncertainty [@McDonald-Madden2008], to choose the conservation policy that minimises uncertainty [@McCarthy2011]. See other examples in [@Moallemi2019].
 :::
 
 ::: callout-caution
@@ -172,9 +172,9 @@ How will the model be analysed, what analytical questions will the model be used
 -   [ ] Candidate decisions should be investigated and are specified a priori. Depending on the modelling context, they may be specified by stakeholders, model users or the analyst [@Moallemi2019].
     -   [ ] Describe the method used to identify relevant management actions and
     -   [ ] specify management actions to be considered included in the model.
-    -   [ ] Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e. as constraints?
+    -   [ ] Are there potentially unacceptable management or policy outcomes identified by stakeholders that should be captured in the model, i.e. as constraints?
 -   [ ] Are there scenarios that model inputs or outputs that must accommodated? Scenarios should be set a priori, [i.e. before the model is built, @Moallemi2019] and may be stakeholder-defined or driven by the judgement of the modeller or other experts [@Mahmoud2009].
-    -   [ ] If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers.
+    -   [ ] If relevant, describe what processes you will use to elicit and identify relevant scenarios, e.g. literature review, structured workshops with stakeholders or decision-makers.
     -   [ ] Specify scenarios under which decisions are investigated.
 :::
 
@@ -202,7 +202,7 @@ How will the model be analysed, what analytical questions will the model be used
 ::: {.callout-note collapse="true"}
 ## Explanation
 
-Preregistration Items in this section are relevant to model transferability [@Yates2018] and constraints on generality in model analysis interpretation. How far do can the results be extrapolated based on the study design (data + model + analysis)? For instance, if there are many confounding variables and not enough spatial / environmental replication, then making broader more general claims beyond the stated boundaries of the model (@analyticalobjectives) may not be warranted. However, larger generalisations about results may be acceptable if the data comes from experimentally manipulated or controlled systems.
+Preregistration Items in this section are relevant to model transferability [@Yates2018] and constraints on generality in model analysis interpretation. How far do can the results be extrapolated based on the study design (data + model + analysis)? For instance, if there are many confounding variables and not enough spatial / environmental replication, then making broader more general claims beyond the stated boundaries of the model (@sec-analytical-objectives) may not be warranted. However, larger generalisations about results may be acceptable if the data comes from experimentally manipulated or controlled systems.
 :::
 
 ::: callout-caution
@@ -216,7 +216,7 @@ Preregistration Items in this section are relevant to model transferability [@Ya
 ::: callout-caution
 ## Preregistration Item (delete as necessary)
 
--   [ ] How will you operationalise any scenarios identified in 1.1.3? For example, how will you operationalise any qualitative changes of interest, such as ‚ 'deterioration' or 'improvement'?
+-   [ ] How will you operationalise any scenarios identified in @sec-analytical-objectives? For example, how will you operationalise any qualitative changes of interest, such as ‚ 'deterioration' or 'improvement'?
 -   [ ] Describe how you will evaluate and distinguish the performance of alternative scenario outcomes
 -   [ ] Justify or otherwise explain how you chose these measures and determined performance criteria in relation to the analytical objectives, model purpose and modelling context, such as the risk attitudes of decision-makers and stakeholders within this system
 :::
@@ -461,7 +461,7 @@ Before calibrating the model to the data, the performance criteria for judging t
 -   [ ] Specify which algorithm(s) you will use for any data-driven parameter estimation, including supervised, or unsupervised machine learning, decision-tree, K-nearest neighbour or cluster algorithms [@Liu2018b].
 :::
 
-### Parameter estimation / model fit performance criteria
+### Parameter estimation / model fit performance criteria {#sec-parameter-model-fit-performance-criteria}
 
 ::: callout-caution
 ## Preregistration Item
@@ -502,7 +502,7 @@ Once critical decisions have been made about the modelling approach and method o
 ::: {.callout-note collapse="true"}
 ## Explanation
 
-This section pertains to any data calibration, validation or testing schemes that will be implemented. For example, the model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model (internal cross-validation) [@Yates2018; @Barnard2019]. For some types of models, hyper-parameters are estimated from data, and may be tuned on further independent holdouts of the training data, ("validation data").
+This section pertains to any data calibration, validation or testing schemes that will be implemented. For example, the model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model [internal cross-validation @Yates2018; @Barnard2019]. For some types of models, hyper-parameters are estimated from data, and may be tuned on further independent holdouts of the training data ("validation data").
 :::
 
 ::: callout-caution
@@ -627,9 +627,7 @@ Ideally, model outputs or predictions are compared to independent data and patte
 ::: {.callout-note collapse="true"}
 ## Explanation
 
-Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019]. Note that the performance metrics and criteria in this section are used for evaluating the structured and parameterised models (ideally) on independent holdout data, so this step is additional to any performance criteria used for determining model structure or parameterisation in section X.
-
-<!-- #TODO add section-cross referencing -->
+Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill [@Araujo2019]. Note that the performance metrics and criteria in this section are used for evaluating the structured and parameterised models (ideally) on independent holdout data, so this step is additional to any performance criteria used for determining model structure or parameterisation (@sec-parameter-model-fit-performance-criteria).
 :::
 
 ::: callout-caution
@@ -668,7 +666,7 @@ Uncertainty can arise from different modelling techniques, response data and pre
 -   [ ] Please describe how you will characterise model and data uncertainties, e.g. propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations [@Araujo2019], or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals [@Saltelli2019].
 -   [ ] Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚ discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes" [@Jakeman:2006ii].
 -   [ ] Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.
--   [ ] If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty (typically in the form of probabilistic parameter covariance, [@Jakeman:2006ii]), specify which measure of uncertainty you will use.
+-   [ ] If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty [typically in the form of probabilistic parameter covariance, @Jakeman:2006ii], specify which measure of uncertainty you will use.
 :::
 
 ### Sensitivity analyses
@@ -692,7 +690,7 @@ Sensitivity analysis examines how uncertainty in model outputs can be apportione
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in section 1.
+-   [ ] Specify any input conditions and relevant parameter values for initial environmental conditions and decision-variables under each scenario specified in @sec-problem-formulation.
 -   [ ] Describe any other relevant technical details of model application, such as methods for how you will implement any simulations or model projections.
 -   [ ] What raw and transformed model outputs will you extract from the model simulations or projections, and how will you map, plot, or otherwise display and synthesise the results of scenario and model analyses.
 -   [ ] Explain how you will analyse the outputs to answer your analytical objectives. For instance, describe any trade-off or robustness analyses you will undertake to help evaluate and choose between different alternatives in consultation with experts or decision-makers.
