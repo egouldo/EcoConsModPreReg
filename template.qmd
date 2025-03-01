@@ -36,11 +36,12 @@ authors: # Replace with authors in your study
     roles: [contributor, data curation, analysis, funding, methodology, project administration, resources, editing]
     orcid: 0000-0003-2833-0194
     affil-id: 2
+    id: CJ
 affiliations:
   - id: 1
-    name: University of Melbourne
+    name: "University of Melbourne"
   - id: 2
-    name: Arthur Rylah Institute for Environmental Research
+    name: "Arthur Rylah Institute for Environmental Research"
 date: last-modified
 bibliography: template_files/references.bib
 ---
