@@ -44,6 +44,9 @@ authors: # Replace with authors in your study
     affiliations:
       - ref: 2
     id: CJ
+  - name: "Workshop participants (to be added on acceptance of co-authorship)"
+    affiliations:
+      - ref: 2
 affiliations:
   - id: 1
     name: "University of Melbourne"
@@ -54,8 +57,8 @@ bibliography: template_files/references.bib
 license: CC-BY-NC-SA
 abstract: |
   Here we present a preregistration template for ecological models in ecology, conservation and related fields. 
-  For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *Adaptive Preregistration* approach [@Gould2024a].
-  Replace author, author-affiliations, keywords, title and abstract metadata as relevant to your study.
+  For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2024a].
+  Replace author, author-affiliations, keywords, title and abstract yaml metadata as relevant to your study.
   All preregistration items should be completed unless marked as optional, or are not applicable to your study.
 keywords: 
   - preregistration
