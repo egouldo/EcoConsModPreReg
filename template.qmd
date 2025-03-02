@@ -80,6 +80,14 @@ keywords:
 
 # Study Information {.unnumbered}
 
+## CRediT Contribution Statement {.unnumbered}
+
+::: callout-caution
+## Preregistration Item
+
+Identify potential contributions according to the CRediT taxonomy (<https://doi.org/10.1371/journal.pone.0244611.t001>) and write a [CRediT contribution statement](https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/credit.html "See link for example statement.").
+:::
+
 ## Conflict of Interest Statement {.unnumbered}
 
 ::: callout-caution
