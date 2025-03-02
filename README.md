@@ -16,10 +16,18 @@ For non-trivial modelling studies, especially where model parameter and structur
 
 ## Format Options
 
-The `EcoConsModPreReg` format can be rendered to html, pdf, or docx. `EcoConsModPreReg` documents deafult to using the Methods in Ecology and Evolution journal citation style. This can be overridden by adding your own .csl file to the document directory, and updating the document's yaml metadata to point to the new .csl file, see the [quarto citations authoring guide](https://quarto.org/docs/authoring/citations.html) for details.
+The `EcoConsModPreReg` format can be rendered to html, pdf, or docx. Standard Quarto formatting options are also available, and can be overridden in the document's yaml metadata, see the [quarto scholarly writing guide](https://quarto.org/docs/authoring/front-matter.html).
+
+### Author Affiliations
 
 Note that to output multiple author affiliations with footnotes when rendering to pdf, the yaml tag `affil-id:` must be provided for each author rather than using the default quarto `affiliations:` tag as for html and docx formats. This is because the pdf output uses the LaTeX `authblk` package to format author affiliations. For details, see [https://stackoverflow.com/a/76016913/4593464](https://stackoverflow.com/a/76016913/4593464).
 
-Standard Quarto options are also available, and can be overridden in the document's yaml metadata, see the [quarto scholarly writing guide](https://quarto.org/docs/authoring/front-matter.html).
+### The CRediT taxonomy
+
+Each listed author / contributor's intended contribution should be provided with the [CRediT taxonomy](https://credit.niso.org/). For details, see: [quarto yaml options for CRediT role values](https://quarto.org/docs/journals/authors.html#roles).
+
+### Citations
+
+`EcoConsModPreReg` documents default to using the Methods in Ecology and Evolution journal citation style. This can be overridden by adding your own .csl file to the document directory, and updating the document's yaml metadata to point to the new .csl file, see the [quarto citations authoring guide](https://quarto.org/docs/authoring/citations.html) for details.
 
 [^1]: Gould, E., Jones, Christopher, S., Yen, J. D. L., Fraser, Hannah, S., Wootton, H., Vivian, L., Good, M., Duncan, David, H., Rumpff, L., & Fidler, F. (2024). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2). Zenodo. https://doi.org/10.5281/zenodo.10884635
