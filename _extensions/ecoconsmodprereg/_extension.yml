@@ -17,6 +17,7 @@ contributes:
       linkcolor: blue
       citecolor: blue
       link-citations: true
+      abstract-title: Background and Instructions #for html and docx (renames "abstract" to "Background and Instructions")
       format-resources:
         - template_files/references.bib
         - mee.bst
@@ -52,6 +53,7 @@ contributes:
           \usepackage[condensed]{roboto}
           \usepackage[T1]{fontenc}
           \usepackage{titlesec}
+          \renewcommand{\abstractname}{Background and Instructions}  %for pdf (renames "abstract" to "Background and Instructions")
     docx: 
       toc: true
       toc-depth: 2
