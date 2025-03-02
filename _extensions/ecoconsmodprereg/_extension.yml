@@ -20,7 +20,6 @@ contributes:
       link-citations: true
       abstract-title: Background and Instructions #for html and docx (renames "abstract" to "Background and Instructions")
       format-resources:
-        - template_files/references.bib
         - mee.bst
         - methods-in-ecology-and-evolution.csl
       csl: methods-in-ecology-and-evolution.csl

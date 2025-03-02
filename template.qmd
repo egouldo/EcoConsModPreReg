@@ -61,7 +61,7 @@ affiliations:
   - id: 2
     name: "Arthur Rylah Institute for Environmental Research"
 date: last-modified
-bibliography: template_files/references.bib
+bibliography: references.bib
 license: CC-BY-NC-SA
 abstract: |
   Here we present a preregistration template for ecological models in ecology, conservation and related fields.
