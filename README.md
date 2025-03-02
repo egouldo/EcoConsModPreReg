@@ -18,6 +18,7 @@ For non-trivial modelling studies, especially where model parameter and structur
 
 The `EcoConsModPreReg` format can be rendered to html, pdf, or docx. `EcoConsModPreReg` documents deafult to using the Methods in Ecology and Evolution journal citation style. This can be overridden by adding your own .csl file to the document directory, and updating the document's yaml metadata to point to the new .csl file, see the [quarto citations authoring guide](https://quarto.org/docs/authoring/citations.html) for details.
 
+Note that to output multiple author affiliations with footnotes when rendering to pdf, the yaml tag `affil-id:` must be provided for each author rather than using the default quarto `affiliations:` tag as for html and docx formats. This is because the pdf output uses the LaTeX `authblk` package to format author affiliations. For details, see [https://stackoverflow.com/a/76016913/4593464](https://stackoverflow.com/a/76016913/4593464).
 
 Standard Quarto options are also available, and can be overridden in the document's yaml metadata, see the [quarto scholarly writing guide](https://quarto.org/docs/authoring/front-matter.html).
 
