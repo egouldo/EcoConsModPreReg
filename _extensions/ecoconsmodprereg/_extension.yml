@@ -44,7 +44,10 @@ contributes:
           \usepackage{fancyhdr}
           \usepackage{sectsty}
           \usepackage{fontspec}
+          \usepackage{mathtools}
+          \usepackage{amsmath}
           \usepackage{amssymb}
+          \usepackage{wasysym}
           \usepackage[noblocks]{authblk}
           \renewcommand*{\Authsep}{, }
           \renewcommand*{\Authand}{, }
@@ -55,6 +58,7 @@ contributes:
           \usepackage[T1]{fontenc}
           \usepackage{titlesec}
           \renewcommand{\abstractname}{Background and Instructions}  %for pdf (renames "abstract" to "Background and Instructions")
+          \AtBeginDocument{\renewcommand{\boxtimes}{\CheckedBox}} %because pandoc uses \boxtimes for checkboxes which are not rendered
     docx: 
       toc: true
       toc-depth: 2
