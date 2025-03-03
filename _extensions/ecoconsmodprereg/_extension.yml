@@ -1,4 +1,4 @@
-title: EcoConsModPreReg
+title: ecoconsmodprereg
 authors: 
   - Elliot Gould
   - Jian Yen
@@ -44,6 +44,7 @@ contributes:
           \usepackage{fancyhdr}
           \usepackage{sectsty}
           \usepackage{fontspec}
+          \usepackage{amssymb}
           \usepackage[noblocks]{authblk}
           \renewcommand*{\Authsep}{, }
           \renewcommand*{\Authand}{, }

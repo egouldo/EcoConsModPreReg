@@ -1,9 +1,9 @@
 ---
 title: "Ecological Modelling Preregistration Template" #focussed, descriptive title with relevant key terms reflecting what will be done in study
 format:
-  EcoConsModPreReg-pdf: default
-  EcoConsModPreReg-html: default
-  EcoConsModPreReg-docx: default
+  ecoconsmodprereg-pdf: default
+  ecoconsmodprereg-html: default
+  ecoconsmodprereg-docx: default
 authors: # Replace with authors in your study 
   - name: Elliot Gould
     email: elliot.gould@unimelb.edu.au
