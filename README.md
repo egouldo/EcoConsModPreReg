@@ -12,7 +12,17 @@ This will install the extension and create an example qmd file containing the Ec
 
 ## Usage
 
-For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *Adaptive Preregistration* approach (insert cross-ref to preprint). Replace author, author-affiliations, keywords, title and abstract yaml metadata as relevant to your study. All preregistration items should be completed unless marked as optional, or are not applicable to your study.
+For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *Adaptive Preregistration* approach (insert cross-ref to preprint). 
+
+To use the quarto template in your project, run the following command in the terminal:
+
+```bash
+quarto use template egouldo/EcoConsModPreReg
+```
+
+This will create `template.qmd` (in the working directory / root directory if unspecified as above), and rename the template file to the name of the enclosing directory.
+
+Edit the template file: Replace author, author-affiliations, keywords, title and abstract yaml metadata as relevant to your study. All preregistration items should be completed unless marked as optional, or are not applicable to your study.
 
 ## Format Options
 
