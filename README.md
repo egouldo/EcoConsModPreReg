@@ -1,5 +1,7 @@
 # `EcoConsModPreReg` Format: A Quarto Template for Adaptive Preregistration of Ecological Models
 
+[![DOI](https://zenodo.org/badge/914660247.svg)](https://doi.org/10.5281/zenodo.15655052)
+
 Here we present a preregistration template for ecological models in ecology, conservation and related fields. This template is based on the EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2) by Gould *et al.* (2024)[^1].
 
 ## Installation
