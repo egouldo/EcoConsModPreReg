@@ -1,0 +1,37 @@
+# --------------------------------------------
+# CITATION file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# --------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "EcoConsModPreReg" in publications use:'
+type: software
+license: CC-BY-4.0
+title: 'EcoConsModPreReg: A Quarto Template for Preregistering Ecological Modelling
+  Studies'
+version: 0.0.0.9003
+abstract: Provides the quarto template extension for creating preregistrations of
+  ecological modelling studies.
+authors:
+- family-names: Gould
+  given-names: Elliot
+  email: elliot.gould@unimelb.edu.au
+  orcid: https://orcid.org/0000-0002-6585-538X
+repository-code: https://github.com/egouldo/EcoConsModPreReg
+url: https://github.com/egouldo/EcoConsModPreReg
+date-released: '2025-06-13'
+contact:
+- family-names: Gould
+  given-names: Elliot
+  email: elliot.gould@unimelb.edu.au
+  orcid: https://orcid.org/0000-0002-6585-538X
+keywords:
+- applied-ecology
+- conservation-science
+- ecology
+- ecology-modeling
+- ecology-modelling
+- open-science
+- preregistration
+- preregistration-template
+
