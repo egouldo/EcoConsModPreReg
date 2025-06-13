@@ -1,0 +1,11 @@
+Package: EcoConsModPreReg
+Title: A Quarto Template for Preregistering Ecological Modelling Studies
+Version: 0.0.0.9003
+Authors@R: 
+    person("Elliot", "Gould", , "elliot.gould@unimelb.edu.au", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6585-538X"))
+Description: Provides the quarto template extension for creating preregistrations of ecological modelling studies.
+License: CC BY 4.0
+Encoding: UTF-8
+Date: 2025-06-13
+URL: https://github.com/egouldo/EcoConsModPreReg
