@@ -9,7 +9,7 @@ type: software
 license: CC-BY-4.0
 title: 'EcoConsModPreReg: A Quarto Template for Preregistering Ecological Modelling
   Studies'
-version: 0.0.0.9003
+version: 0.0.0.9004
 abstract: Provides the quarto template extension for creating preregistrations of
   ecological modelling studies.
 authors:
@@ -34,4 +34,3 @@ keywords:
 - open-science
 - preregistration
 - preregistration-template
-

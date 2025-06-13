@@ -1,6 +1,6 @@
 Package: EcoConsModPreReg
 Title: A Quarto Template for Preregistering Ecological Modelling Studies
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R: 
     person("Elliot", "Gould", , "elliot.gould@unimelb.edu.au", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6585-538X"))
