@@ -14,7 +14,7 @@ For non-trivial modelling studies, especially where model parameter and structur
 quarto use template egouldo/EcoConsModPreReg
 ```
 
-This will install the extension and create a `template.qmd` file containing the EcoConsPreReg template in the working or root directory (if unspecified, as above), and will rename the template file to the name of the enclosing directory. The template can be used as a starting place for your preregistration, the template source code is located here: [template.qmd](template.qmd).
+This command will install the EcoConsPreReg extension in your project workspace, including a quarto template that can be used as a starting point for your preregistration. The template source code is located here: [template.qmd](template.qmd). When you execute the command you will be prompted to choose an installation location---either in the working (root) directory, or in a subdirectory (existing or new). By default, the installation will create the quarto template file `template.qmd` in the working (root) directory. If you specify a subdirectory location the installation process will rename the template file to match the name of the enclosing directory (e.g., `specified_subdirectory/specified_subdirectory.qmd`). 
 
 ## Use with Existing Preregistration Document
 
