@@ -79,7 +79,7 @@ affiliations:
     name: "Arthur Rylah Institute for Environmental Research, Department of Energy, Environment and Climate Action"
 date: last-modified
 bibliography: references.bib
-license: CC-BY-NC-SA
+license: CC BY-NC-SA
 abstract: |
   Here we present a preregistration template for ecological models in ecology, conservation and related fields.
   For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2024a].
