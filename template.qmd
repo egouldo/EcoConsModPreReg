@@ -18,8 +18,11 @@ authors: # Replace with authors in your study
     roles: [contributor, data curation, analysis, funding, methodology, project administration, resources, editing]
     orcid: 0000-0003-2833-0194
     affiliations:
+      - ref: 1
       - ref: 2
-    affil-id: 2
+    affil-id: 
+      - 1
+      - 2
     id: CJ
   - name: Jian D.L. Yen
     roles: [contributor, data curation, analysis, investigation, methodology, project administration, resources, software, validation, visualisation, editing]
