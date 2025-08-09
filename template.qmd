@@ -7,6 +7,7 @@ format:
 authors: # Replace with authors in your study 
   - name: Elliot Gould
     email: elliot.gould@unimelb.edu.au
+    url: https://github.com/egouldo
     orcid: 0000-0002-6585-538X
     roles: [conceptualization, maintainer, funding, investigation, methodology, project administration, resources, software, validation, vizualisation, editing, writing]
     attributes: corresponding
