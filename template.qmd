@@ -14,15 +14,52 @@ authors: # Replace with authors in your study
       - ref: 1
     affil-id: 1
     id: EG
-  - name: David Duncan
+  - name: Christopher S. Jones
+    roles: [contributor, data curation, analysis, funding, methodology, project administration, resources, editing]
+    orcid: 0000-0003-2833-0194
+    affiliations:
+      - ref: 2
+    affil-id: 2
+    id: CJ
+  - name: Jian D.L. Yen
+    roles: [contributor, data curation, analysis, investigation, methodology, project administration, resources, software, validation, visualisation, editing]
+    orcid: 0000-0001-7964-923X
+    affiliations:
+      - ref: 2
+    affil-id: 2
+  - name: Hannah S. Fraser
+    orcid: 0000-0003-2443-4463
+    roles: [contributor, conceptualization, methodology, investigation, supervision, editing]
+    affiliations:
+      - ref: 1
+    affil-id: 1
+  - name: Henry Wootton
+    roles: [contributor, software, visualisation, methodology]
+    orcid: 0000-0001-6506-0248
+    affiliations:
+      - ref: 2
+    affil-id: 2
+  - name: Megan K. Good
+    orcid: 0000-0002-6908-1633
+    roles: [contributor, methodology, editing]
+    affiliations:
+      - ref: 1
+    affil-id: 1
+  - name: David H. Duncan
     orcid: 0000-0003-4411-8214
     roles: [contributor, methodology]
     affiliations:
       - ref: 1
     affil-id: 1
-  - name: Hannah Fraser
-    orcid: 0000-0003-2443-4463
-    roles: [contributor, conceptualization, methodology, supervision, editing]
+  - name: Cindy E. Hauser
+    orcid: 0000-0002-5187-6585
+    roles: [contributor, methodology, investigation, editing]
+    affiliations:
+      - ref: 2
+    affil-id: 2
+  - name: Bonnie C. Wintle
+    roles: [contributor, conceptualization, methodology, supervision, writing, editing]
+    orcid: 0000-0001-9400-8086
     affiliations:
       - ref: 1
     affil-id: 1
@@ -32,34 +69,11 @@ authors: # Replace with authors in your study
     affiliations:
       - ref: 1
     affil-id: 1
-  - name: Jian Yen
-    roles: [contributor, data curration, analysis, investigation, methodology, project administration, resources, software, validation, vizualisation, editing]
-    orcid: 0000-0001-7964-923X
-    affiliations:
-      - ref: 2
-    affil-id: 2
-  - name: Megan Good
-    orcid: 0000-0002-6908-1633
-    roles: [contributor, methodology, editing]
-    affiliations:
-      - ref: 1
-    affil-id: 1
-  - name: Chris Jones
-    roles: [contributor, data curation, analysis, funding, methodology, project administration, resources, editing]
-    orcid: 0000-0003-2833-0194
-    affiliations:
-      - ref: 2
-    affil-id: 2
-    id: CJ
-  - name: "Workshop participants (to be added on acceptance of co-authorship)"
-    affiliations:
-      - ref: 2
-    affil-id: 2
 affiliations:
   - id: 1
-    name: "University of Melbourne"
+    name: "School of Agriculture, Food and Ecosystem Sciences, University of Melbourne"
   - id: 2
-    name: "Arthur Rylah Institute for Environmental Research"
+    name: "Arthur Rylah Institute for Environmental Research, Department of Energy, Environment and Climate Action"
 date: last-modified
 bibliography: references.bib
 license: CC-BY-NC-SA
