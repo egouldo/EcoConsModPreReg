@@ -121,7 +121,7 @@ Identify potential contributions according to the CRediT taxonomy (<https://doi.
     -   Data access via download; usage of data for all purposes (public use file)
     -   Data access via download; usage of data restricted to scientific purposes (scientific use file)
     -   Data access via download; usage of data has to be agreed and defined on an individual case basis
-    -   Data access via secure data center (no download, usage/analysis only in a secure data center)
+    -   Data access via secure data centre (no download, usage/analysis only in a secure data centre)
     -   Data available upon email request by member of scientific community
     -   Other (please specify)
 -   [ ] "Data will not be made available"
@@ -139,7 +139,7 @@ Identify potential contributions according to the CRediT taxonomy (<https://doi.
     -   Code access via download; usage of code for all purposes (public use file)
     -   Code access via download; usage of code restricted to scientific purposes (scientific use file)
     -   Code access via download; usage of code has to be agreed and defined on an individual case basis
-    -   Code access via secure code center (no download, usage/analysis only in a secure code center)
+    -   Code access via secure code centre (no download, usage/analysis only in a secure code centre)
     -   Code available upon email request by member of scientific community
     -   Other (please specify)
 -   [ ] "Code will not be made available"
@@ -349,7 +349,7 @@ This section specifies the plan for collecting, processing and preparing data av
 -   [ ] Document the identity, quantity and provenance of any data that will be used to develop, identify and test the model.
 -   [ ] For each dataset, is the data open or publicly available?
 -   [ ] How can the data be accessed? Provide a link or contact as appropriate, indicating any restrictions on the use of data.
--   [ ] Date of download, access, or expected timing offuture access.
+-   [ ] Date of download, access, or expected timing of future access.
 -   [ ] Describe the source of the data - what entity originally collected this data? (National Data Set, Private Organisational Data, Own Lab Collection, Other Lab Collection, External Contractor, Meta-Analysis, Expert Elicitation, Other).
 -   [ ] Codebook and meta-data. If a codebook or other meta-data is available, link to it here and / or upload the document(s).
 -   [ ] Prior work based on this dataset - Have you published / presented any previous work based on this dataset? Include any publications, conference presentations (papers, posters), or working papers (in-prep, unpublished, preprints) based on this dataset you have worked on.
@@ -456,8 +456,8 @@ All modelling approaches require the selection of model features, which conform 
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] For each response, predictor, and covariate, specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occuring. Specify any treatment of model variables, including whether they are lumped / distributed, lienar / non-linear, stochastic / deterministic [@Jakeman:2006ii].
--   [ ] Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification bacj to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].
+-   [ ] For each response, predictor, and covariate, specify how these variables will be operationalised in the model. This should relate directly to the analytical and/or management objectives specified during the problem formulation phase. Operationalisations could include: the extent of a response, an extreme value, a trend, a long-term mean, a probability distribution, a spatial pattern, a time-series, qualitative change, such as a direction of change or, the frequency, location, or probability of some event occurring. Specify any treatment of model variables, including whether they are lumped / distributed, linear / non-linear, stochastic / deterministic [@Jakeman:2006ii].
+-   [ ] Provide a rationale for your choices, including why plausible alternatives under consideration were not chosen, and relate your justification back to the purpose, objectives, prior knowledge and or logistical constraints specified in the problem formulation phase [@Jakeman:2006ii].
 :::
 
 ### Choose model family
@@ -689,7 +689,7 @@ Model performance can be quantified by a range of tests, including measures of a
 ::: {.callout-note collapse="true"}
 ## Rationale & Explanation
 
-Uncertainty in models arises due to incomplete system understanding (which processes to include, or which interact), from imprecise, finite and sparese data measurements, and from uncertainty in input conditions and scenarios for model simulations or runs [@Jakeman:2006ii]. Non-technical uncertainties can also be introduced throughout the modellign process, such as uncertainties arising from issues in problem-framing, indeterminicies, and modeller / client values [@Jakeman:2006ii].
+Uncertainty in models arises due to incomplete system understanding (which processes to include, or which interact), from imprecise, finite and sparse data measurements, and from uncertainty in input conditions and scenarios for model simulations or runs [@Jakeman:2006ii]. Non-technical uncertainties can also be introduced throughout the modelling process, such as uncertainties arising from issues in problem-framing, indeterminicies, and modeller / client values [@Jakeman:2006ii].
 
 The purpose of model analysis is to prevent blind trust in the model by understanding how model outputs have emerged, and to 'challenge' the model by verifying whether the model is still believable and fit for purpose if one or more parameters are changed [@Grimm:2014es].
 
