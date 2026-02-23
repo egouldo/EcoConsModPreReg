@@ -169,7 +169,7 @@ Identify potential contributions according to the CRediT taxonomy (<https://doi.
 This section specifies the decision-making context in which the model will be used or the intended scope and context of conclusions. Important components include the decision maker and stakeholders (including experts) and their view on: i) the nature of the problem or decision addressed and how the scope of the modelling tool fits within the (broader) context (i.e. model purpose; ii) the spatial and temporal scales relevant to the decision context; iii) specified desired outputs; iv) role and inclusion in model development and testing; v) whether they foresee unacceptable outcomes that need to be represented in the model (i.e. as constraints), and; vi) what future scenarios does the model need to account for (noting this may be revised later). It should also provide a summary of the domain of applicability of the model, and reasonable extrapolation limits [@Grimm:2014es].
 :::
 
-## Model Context and Purpose
+## Model context and purpose
 
 ::: {.callout-note collapse="true"}
 ## Rationale & Explanation
@@ -261,7 +261,7 @@ Preregistration Items in this section are relevant to model transferability [@Ya
 -   [ ] What is the intended domain in which the model is to be applied? Are there any reasonable extrapolation limits beyond which you expect the model should not be applied [@Grimm:2014es]?
 :::
 
-## Scenario Analysis Operationalisation
+## Scenario analysis operationalisation
 
 ::: callout-caution
 ## Preregistration Item (delete as necessary)
@@ -288,7 +288,7 @@ Conceptual models underpin the formal or quantitative model [@Cartwright:2016kr]
 -   [ ] Finally, how do you intend on representing the final conceptual model? This will likely depend on the method chosen to elicit the conceptual model.
 :::
 
-## Explain Critical Conceptual Design Decisions
+## Explain critical conceptual design decisions
 
 ::: callout-caution
 ## Preregistration Item
