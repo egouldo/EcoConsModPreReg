@@ -83,9 +83,11 @@ bibliography: references.bib
 license: CC BY-NC-SA
 abstract: |
   Here we present a preregistration template for ecological models in ecology, conservation and related fields.
-  For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2024a].
   
-  Replace author, author-affiliations and persistent ID's (e.g. [ORCID iD]( https://orcid.org/)), keywords, title and abstract [metadata in the document YAML](https://quarto.org/docs/journals/authors.html) as relevant to your study. 
+  Replace author, author-affiliations and persistent ID's (e.g. [ORCID iD]( https://orcid.org/)), keywords, title and abstract [metadata in the document YAML](https://quarto.org/docs/journals/authors.html) as relevant to your study.
+  
+  For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2024a]. Please read the [*Primer on Adaptive Preregistration*](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) before beginning.
+  
   
   All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study, which can be deleted. Additional preregistration items can be added as required at the researchers' discretion.
 keywords: 
