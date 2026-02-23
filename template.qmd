@@ -379,22 +379,20 @@ This section specifies the plan for collecting, processing and preparing data av
 -   [ ] Describe any data preparation and processing steps, including manipulation of environmental layers (e.g. standardisation and geographic projection) or variable construction (e.g. Principal Component Analysis).
 :::
 
-### Describe any data exploration or preliminary data analyses
+### Describe any data exploration or preliminary data analyses {#sec-exploratory-analyses}
 
-::: {.callout-note}
+::: callout-note
 ## Explanation
 
 In many modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018].
 :::
 
-::: {.callout-warning}
-## Caution!
+::: callout-warning
+## Caution! Beware questionable research practices and overfitting
 
-Any modelling and analysis decisions based on data exploration or preliminary investigations increase the risk of questionable research practices and overfitting 
+Any modelling and analysis decisions based on data exploration or preliminary investigations increase the risk of questionable research practices and overfitting [@Gould2026]. Such *data-dependent* analytic decisions [@Liu2020] should ideally be performed using a small, independent subset of the full dataset in order to avoid model overfitting arising from "data leakage" or "model selection bias" [@Kapoor2023; @Campbell2021; @Arnqvist2020].
 
-should ideally be performed on a small and independent dataset, separate from the full training and test datasets. 
-
-
+The preregistration item below follows a protocol for registering 'flexible' analyses, please see our ['Primer on Adaptive Preregistration'](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) in Gould et al. -@Gould2024a for details.
 :::
 
 ::: callout-caution
@@ -402,10 +400,10 @@ should ideally be performed on a small and independent dataset, separate from th
 
 *For each separate preliminary or investigatory analysis:*
 
--   [ ] State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.
+-   [ ] State what quantity or estimand needs to be known in order to proceed with further decision-making about the modelling procedure, stating why the analysis is necessary.
 -   [ ] Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.
--   [ ] What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)
--   [ ] Specify exactly which parts of the data will be used
+-   [ ] What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)?
+-   [ ] Specify exactly which parts of the data will be used, ensuring that any data subsets used are described in @sec-calibration-data.
 -   [ ] Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.
 :::
 
@@ -573,7 +571,7 @@ This section pertains to any data calibration, validation or testing schemes tha
 -   [ ] Describe any data calibration, validation and testing scheme you will implement, including any procedures for tuning or estimating model hyper-parameters (if any).
 :::
 
-### Describe calibration/validation data
+### Describe calibration/validation data {#sec-calibration-data}
 
 ::: {.callout-note collapse="true"}
 ## Explanation & Rationale
@@ -593,6 +591,10 @@ The following items pertain to properties of the *datasets* used for calibration
 -   [ ] Which data will be used as for the testing data? What method will be used for generating training / test data subsets?
 -   [ ] Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?
 -   [ ] It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?
+
+*If performing any data exploration or other preliminary analyses (delete as needed)*
+
+-   [ ] Describe any data subsets used for each analysis in *@sec-exploratory-analyses.*
 :::
 
 ## Implementation verification

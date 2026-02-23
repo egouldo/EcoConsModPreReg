@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-09">
+<meta name="dcterms.date" content="2026-02-23">
 <meta name="keywords" content="preregistration, preregistration template, transparency, reproducibility, open-science">
 
 <title>Ecological Modelling Preregistration Template</title>
@@ -48,14 +48,15 @@ div.csl-indent {
 <script src="template_files/libs/clipboard/clipboard.min.js"></script>
 <script src="template_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="template_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="template_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="template_files/libs/quarto-html/popper.min.js"></script>
 <script src="template_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="template_files/libs/quarto-html/anchor.min.js"></script>
 <link href="template_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="template_files/libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="template_files/libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="template_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="template_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="template_files/libs/bootstrap/bootstrap-3a46cad8bb87003b1ba3848cbb764292.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="template_files/libs/bootstrap/bootstrap-2592f2e81fde8f329e4a279b3055000e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -78,7 +79,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#sec-problem-formulation" id="toc-sec-problem-formulation" class="nav-link" data-scroll-target="#sec-problem-formulation"><span class="header-section-number">1</span> Problem Formulation</a>
   <ul class="collapse">
-  <li><a href="#model-context-and-purpose" id="toc-model-context-and-purpose" class="nav-link" data-scroll-target="#model-context-and-purpose"><span class="header-section-number">1.1</span> Model Context and Purpose</a>
+  <li><a href="#model-context-and-purpose" id="toc-model-context-and-purpose" class="nav-link" data-scroll-target="#model-context-and-purpose"><span class="header-section-number">1.1</span> Model context and purpose</a>
   <ul class="collapse">
   <li><a href="#key-stakeholders-and-model-users" id="toc-key-stakeholders-and-model-users" class="nav-link" data-scroll-target="#key-stakeholders-and-model-users"><span class="header-section-number">1.1.1</span> Key stakeholders and model users</a></li>
   <li><a href="#sec-model-purpose-context-and-problem-context" id="toc-sec-model-purpose-context-and-problem-context" class="nav-link" data-scroll-target="#sec-model-purpose-context-and-problem-context"><span class="header-section-number">1.1.2</span> Model purpose, context and problem context</a></li>
@@ -87,19 +88,19 @@ div.csl-indent {
   <li><a href="#model-scope-scale-and-resolution" id="toc-model-scope-scale-and-resolution" class="nav-link" data-scroll-target="#model-scope-scale-and-resolution"><span class="header-section-number">1.1.5</span> Model Scope, Scale and Resolution</a></li>
   <li><a href="#intended-application-of-results" id="toc-intended-application-of-results" class="nav-link" data-scroll-target="#intended-application-of-results"><span class="header-section-number">1.1.6</span> Intended application of results</a></li>
   </ul></li>
-  <li><a href="#scenario-analysis-operationalisation" id="toc-scenario-analysis-operationalisation" class="nav-link" data-scroll-target="#scenario-analysis-operationalisation"><span class="header-section-number">1.2</span> Scenario Analysis Operationalisation</a></li>
+  <li><a href="#scenario-analysis-operationalisation" id="toc-scenario-analysis-operationalisation" class="nav-link" data-scroll-target="#scenario-analysis-operationalisation"><span class="header-section-number">1.2</span> Scenario analysis operationalisation</a></li>
   </ul></li>
   <li><a href="#define-conceptual-model" id="toc-define-conceptual-model" class="nav-link" data-scroll-target="#define-conceptual-model"><span class="header-section-number">2</span> Define Conceptual Model</a>
   <ul class="collapse">
   <li><a href="#choose-elicitation-and-representation-method" id="toc-choose-elicitation-and-representation-method" class="nav-link" data-scroll-target="#choose-elicitation-and-representation-method"><span class="header-section-number">2.1</span> Choose elicitation and representation method</a></li>
-  <li><a href="#explain-critical-conceptual-design-decisions" id="toc-explain-critical-conceptual-design-decisions" class="nav-link" data-scroll-target="#explain-critical-conceptual-design-decisions"><span class="header-section-number">2.2</span> Explain Critical Conceptual Design Decisions</a></li>
+  <li><a href="#explain-critical-conceptual-design-decisions" id="toc-explain-critical-conceptual-design-decisions" class="nav-link" data-scroll-target="#explain-critical-conceptual-design-decisions"><span class="header-section-number">2.2</span> Explain critical conceptual design decisions</a></li>
   <li><a href="#model-assumptions-and-uncertainties" id="toc-model-assumptions-and-uncertainties" class="nav-link" data-scroll-target="#model-assumptions-and-uncertainties"><span class="header-section-number">2.3</span> Model assumptions and uncertainties</a></li>
   <li><a href="#identify-predictor-and-response-variables" id="toc-identify-predictor-and-response-variables" class="nav-link" data-scroll-target="#identify-predictor-and-response-variables"><span class="header-section-number">2.4</span> Identify predictor and response variables</a></li>
   <li><a href="#define-prior-knowledge-data-specification-and-evaluation" id="toc-define-prior-knowledge-data-specification-and-evaluation" class="nav-link" data-scroll-target="#define-prior-knowledge-data-specification-and-evaluation"><span class="header-section-number">2.5</span> Define prior knowledge, data specification and evaluation</a>
   <ul class="collapse">
   <li><a href="#collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model" id="toc-collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model" class="nav-link" data-scroll-target="#collate-available-data-sources-that-could-be-used-to-parameterise-or-structure-the-model"><span class="header-section-number">2.5.1</span> Collate available data sources that could be used to parameterise or structure the model</a></li>
   <li><a href="#data-processing-and-preparation" id="toc-data-processing-and-preparation" class="nav-link" data-scroll-target="#data-processing-and-preparation"><span class="header-section-number">2.5.2</span> Data Processing and Preparation</a></li>
-  <li><a href="#describe-any-data-exploration-or-preliminary-data-analyses." id="toc-describe-any-data-exploration-or-preliminary-data-analyses." class="nav-link" data-scroll-target="#describe-any-data-exploration-or-preliminary-data-analyses."><span class="header-section-number">2.5.3</span> Describe any data exploration or preliminary data analyses.</a></li>
+  <li><a href="#sec-exploratory-analyses" id="toc-sec-exploratory-analyses" class="nav-link" data-scroll-target="#sec-exploratory-analyses"><span class="header-section-number">2.5.3</span> Describe any data exploration or preliminary data analyses</a></li>
   <li><a href="#data-evaluation-exclusion-and-missing-data" id="toc-data-evaluation-exclusion-and-missing-data" class="nav-link" data-scroll-target="#data-evaluation-exclusion-and-missing-data"><span class="header-section-number">2.5.4</span> Data evaluation, exclusion and missing data</a></li>
   </ul></li>
   <li><a href="#conceptual-model-evaluation" id="toc-conceptual-model-evaluation" class="nav-link" data-scroll-target="#conceptual-model-evaluation"><span class="header-section-number">2.6</span> Conceptual model evaluation</a></li>
@@ -125,7 +126,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#model-calibration-and-validation-scheme" id="toc-model-calibration-and-validation-scheme" class="nav-link" data-scroll-target="#model-calibration-and-validation-scheme"><span class="header-section-number">4.1</span> Model calibration and validation scheme</a>
   <ul class="collapse">
-  <li><a href="#describe-calibrationvalidation-data" id="toc-describe-calibrationvalidation-data" class="nav-link" data-scroll-target="#describe-calibrationvalidation-data"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</a></li>
+  <li><a href="#sec-calibration-data" id="toc-sec-calibration-data" class="nav-link" data-scroll-target="#sec-calibration-data"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</a></li>
   </ul></li>
   <li><a href="#implementation-verification" id="toc-implementation-verification" class="nav-link" data-scroll-target="#implementation-verification"><span class="header-section-number">4.2</span> Implementation verification</a></li>
   <li><a href="#model-checking" id="toc-model-checking" class="nav-link" data-scroll-target="#model-checking"><span class="header-section-number">4.3</span> Model checking</a>
@@ -256,7 +257,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 9, 2025</p>
+      <p class="date">February 23, 2026</p>
     </div>
   </div>
   
@@ -266,9 +267,10 @@ div.csl-indent {
 <div>
   <div class="abstract">
     <div class="block-title">Background and Instructions</div>
-    <p>Here we present a preregistration template for ecological models in ecology, conservation and related fields. For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an <em><a href="https://egouldo.github.io/EcoConsPreReg/">Adaptive Preregistration</a></em> approach <span class="citation" data-cites="Gould2024a">(<a href="#ref-Gould2024a" role="doc-biblioref">Gould et al., 2024</a>)</span>.</p>
-    <p>Replace author, author-affiliations and persistent ID’s (e.g.&nbsp;<a href="https://orcid.org/">ORCID iD</a>), keywords, title and abstract metadata as relevant to your study.</p>
-    <p>All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study. Additional preregistration items can be added as required at the researchers’ discretion.</p>
+    <p>Here we present a preregistration template for ecological models in ecology, conservation and related fields.</p>
+    <p>Replace author, author-affiliations and persistent ID’s (e.g.&nbsp;<a href="https://orcid.org/">ORCID iD</a>), keywords, title and abstract <a href="https://quarto.org/docs/journals/authors.html">metadata in the document YAML</a> as relevant to your study.</p>
+    <p>For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an <em><a href="https://egouldo.github.io/EcoConsPreReg/">Adaptive Preregistration</a></em> approach <span class="citation" data-cites="Gould2024a">(<a href="#ref-Gould2024a" role="doc-biblioref">Gould et al., 2024</a>)</span>. Please read the <a href="https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html"><em>Primer on Adaptive Preregistration</em></a> before beginning.</p>
+    <p>All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study, which can be deleted. Additional preregistration items can be added as required at the researchers’ discretion.</p>
   </div>
 </div>
 
@@ -292,7 +294,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -308,7 +310,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -326,7 +328,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -357,7 +359,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -388,7 +390,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -407,12 +409,12 @@ Preregistration Item
 <section id="sec-problem-formulation" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Problem Formulation</h1>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rationale &amp; Explanation
+<span class="screen-reader-only">Note</span>Rationale &amp; Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -423,14 +425,14 @@ Rationale &amp; Explanation
 </div>
 </div>
 <section id="model-context-and-purpose" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="model-context-and-purpose"><span class="header-section-number">1.1</span> Model Context and Purpose</h2>
+<h2 data-number="1.1" class="anchored" data-anchor-id="model-context-and-purpose"><span class="header-section-number">1.1</span> Model context and purpose</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rationale &amp; Explanation
+<span class="screen-reader-only">Note</span>Rationale &amp; Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -449,7 +451,7 @@ Rationale &amp; Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -471,7 +473,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -488,12 +490,12 @@ Preregistration Item
 <section id="sec-analytical-objectives" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="sec-analytical-objectives"><span class="header-section-number">1.1.3</span> Analytical objectives</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -509,7 +511,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -539,7 +541,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -561,7 +563,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -575,12 +577,12 @@ Preregistration Item
 <section id="intended-application-of-results" class="level3" data-number="1.1.6">
 <h3 data-number="1.1.6" class="anchored" data-anchor-id="intended-application-of-results"><span class="header-section-number">1.1.6</span> Intended application of results</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -596,7 +598,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -608,14 +610,14 @@ Preregistration Item
 </section>
 </section>
 <section id="scenario-analysis-operationalisation" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="scenario-analysis-operationalisation"><span class="header-section-number">1.2</span> Scenario Analysis Operationalisation</h2>
+<h2 data-number="1.2" class="anchored" data-anchor-id="scenario-analysis-operationalisation"><span class="header-section-number">1.2</span> Scenario analysis operationalisation</h2>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item (delete as necessary)
+<span class="screen-reader-only">Caution</span>Preregistration Item (delete as necessary)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -631,12 +633,12 @@ Preregistration Item (delete as necessary)
 <section id="define-conceptual-model" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Define Conceptual Model</h1>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -654,7 +656,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -666,14 +668,14 @@ Preregistration Item
 </div>
 </section>
 <section id="explain-critical-conceptual-design-decisions" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="explain-critical-conceptual-design-decisions"><span class="header-section-number">2.2</span> Explain Critical Conceptual Design Decisions</h2>
+<h2 data-number="2.2" class="anchored" data-anchor-id="explain-critical-conceptual-design-decisions"><span class="header-section-number">2.2</span> Explain critical conceptual design decisions</h2>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -696,7 +698,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -712,12 +714,12 @@ Preregistration Item
 <section id="identify-predictor-and-response-variables" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="identify-predictor-and-response-variables"><span class="header-section-number">2.4</span> Identify predictor and response variables</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -733,7 +735,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -752,12 +754,12 @@ Preregistration Item
 <section id="define-prior-knowledge-data-specification-and-evaluation" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="define-prior-knowledge-data-specification-and-evaluation"><span class="header-section-number">2.5</span> Define prior knowledge, data specification and evaluation</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -775,7 +777,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -794,7 +796,7 @@ Preregistration Item
 </ul>
 <p><strong>Sampling Plan (for data you will collect, delete as appropriate):</strong></p>
 <ul class="task-list">
-<li><label><input type="checkbox">Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.</label></li>
+<li><label><input type="checkbox">Data collection procedures - describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.</label></li>
 <li><label><input type="checkbox">Sample Size - Describe the sample size of your study.</label></li>
 <li><label><input type="checkbox">Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.</label></li>
 <li><label><input type="checkbox">If sample size cannot be specified, specify a stopping rule - i.e.&nbsp;how will you decide when to terminate your data collection?</label></li>
@@ -810,7 +812,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -820,22 +822,33 @@ Preregistration Item
 </div>
 </div>
 </section>
-<section id="describe-any-data-exploration-or-preliminary-data-analyses." class="level3" data-number="2.5.3">
-<h3 data-number="2.5.3" class="anchored" data-anchor-id="describe-any-data-exploration-or-preliminary-data-analyses."><span class="header-section-number">2.5.3</span> Describe any data exploration or preliminary data analyses.</h3>
+<section id="sec-exploratory-analyses" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="sec-exploratory-analyses"><span class="header-section-number">2.5.3</span> Describe any data exploration or preliminary data analyses</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al., 2018</a>)</span>.</p>
+<p>In many modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al., 2018</a>)</span>.</p>
 </div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Caution! Beware questionable research practices and overfitting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Any modelling and analysis decisions based on data exploration or preliminary investigations increase the risk of questionable research practices and overfitting <span class="citation" data-cites="Gould2026">(<a href="#ref-Gould2026" role="doc-biblioref">Gould et al., 2026</a>)</span>. Such <em>data-dependent</em> analytic decisions <span class="citation" data-cites="Liu2020">(<a href="#ref-Liu2020" role="doc-biblioref">Y. Liu et al., 2020</a>)</span> should ideally be performed using a small, independent subset of the full dataset in order to avoid model overfitting arising from “data leakage” or “model selection bias” <span class="citation" data-cites="Kapoor2023 Campbell2021 Arnqvist2020">(<a href="#ref-Arnqvist2020" role="doc-biblioref">Arnqvist, 2020</a>; <a href="#ref-Campbell2021" role="doc-biblioref">Campbell, 2021</a>; <a href="#ref-Kapoor2023" role="doc-biblioref">Kapoor &amp; Narayanan, 2023</a>)</span>.</p>
+<p>The preregistration item below follows a protocol for registering ‘flexible’ analyses, please see our <a href="https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html">‘Primer on Adaptive Preregistration’</a> in Gould et al. <span class="citation" data-cites="Gould2024a">(<a href="#ref-Gould2024a" role="doc-biblioref">2024</a>)</span> for details.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -844,16 +857,16 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><em>For each separate preliminary or investigatory analysis:</em></p>
 <ul class="task-list">
-<li><label><input type="checkbox">State what needs to be known to proceed with further decision-making about the modelling procedure, and why the analysis is necessary.</label></li>
+<li><label><input type="checkbox">State what quantity or estimand needs to be known in order to proceed with further decision-making about the modelling procedure, stating why the analysis is necessary.</label></li>
 <li><label><input type="checkbox">Explain how you will implement this analysis, as well as any techniques you will use to summarise and explore your data.</label></li>
-<li><label><input type="checkbox">What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)</label></li>
-<li><label><input type="checkbox">Specify exactly which parts of the data will be used</label></li>
+<li><label><input type="checkbox">What method will you use to represent this analysis (graphical, tabular, or otherwise, describe)?</label></li>
+<li><label><input type="checkbox">Specify exactly which parts of the data will be used, ensuring that any data subsets used are described in <a href="#sec-calibration-data" class="quarto-xref">Section&nbsp;4.1.1</a>.</label></li>
 <li><label><input type="checkbox">Describe how the results will be interpreted, listing each potential analytic decision, as well as the analysis finding that will trigger each decision, where possible.</label></li>
 </ul>
 </div>
@@ -862,16 +875,16 @@ Preregistration Item
 <section id="data-evaluation-exclusion-and-missing-data" class="level3" data-number="2.5.4">
 <h3 data-number="2.5.4" class="anchored" data-anchor-id="data-evaluation-exclusion-and-missing-data"><span class="header-section-number">2.5.4</span> Data evaluation, exclusion and missing data</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Documenting issues with reliability is important because data quality and ecological relevance might be constrained by measurement error, inappropriate experimental design, and heterogeneity and variability inherent in ecological systems <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>. Ideally, model input data should be internally consistent across temporal and spatial scales and resolutions, and appropriate to the problem at hand <span class="citation" data-cites="Mahmoud2009">(<a href="#ref-Mahmoud2009" role="doc-biblioref">Mahmoud et al., 2009</a>)</span>.</p>
 </div>
@@ -883,7 +896,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -906,7 +919,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -922,16 +935,16 @@ Preregistration Item
 <section id="formalise-and-specify-model" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Formalise and Specify Model</h1>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In this section describe what quantitative methods you will use to build the model/s, explain how they are relevant to the client/manager/user’s purpose.</p>
 </div>
@@ -940,16 +953,16 @@ Explanation
 <section id="model-class-modelling-framework-and-approach" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="model-class-modelling-framework-and-approach"><span class="header-section-number">3.1</span> Model class, modelling framework and approach</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Modelling approaches can be described as occurring on a spectrum from correlative or phenomenological to mechanistic or process-based <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al., 2018</a>)</span>; where correlative models use mathematical functions fitted to data to describe underlying processes, and mechanistic models explicitly represent processes and details of component parts of a biological system that are expected to give rise to the data <span class="citation" data-cites="White2019a">(<a href="#ref-White2019a" role="doc-biblioref">White &amp; Marshall, 2019</a>)</span>. A model ‘class,’ ‘family’’ or ‘type’ is often used to describe a set of models each of which has a distinct but related sampling distribution <span class="citation" data-cites="Liu2008">(<a href="#ref-Liu2008" role="doc-biblioref">C. C. Liu &amp; Aitkin, 2008</a>)</span>. The model family is driven by choices about the types of variables covered and the nature of their treatment, as well as structural features of the model, such as link functions, spatial and temporal scales of processes and their interactions <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</p>
 </div>
@@ -961,7 +974,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -974,16 +987,16 @@ Preregistration Item
 <section id="choose-model-features-and-family" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="choose-model-features-and-family"><span class="header-section-number">3.2</span> Choose model features and family</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>All modelling approaches require the selection of model features, which conform with the conceptual model and data specified in previous steps <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>. The choice of model are determined in conjunction with features are selected. Model features include elements such as the functional form of interactions, data structures, measures used to specify links, any bins or discretisation of continuous variables. It is usually difficult to change fundamental features of a model beyond an early stage of model development, so careful thought and planning here is useful to the modeller <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>. However, if changes to these fundamental aspects of the model do need to change, document how and why these choices were made, including any results used to support any changes in the model.</p>
 </div>
@@ -997,7 +1010,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1016,7 +1029,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1031,16 +1044,16 @@ Preregistration Item
 <section id="describe-approach-for-identifying-model-structure" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="describe-approach-for-identifying-model-structure"><span class="header-section-number">3.3</span> Describe <em>approach</em> for identifying model structure</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section relates to the process of determining the best/most efficient/parsimonious representation of the system at the appropriate scale of concern <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span> that best meets the analytical objectives specified in the problem formulation phase. Model structure refers to the choice of variables included in the model, and the nature of the relationship among those variables. Approaches to finding model structure and parameters may be knowledge-supported, or data-driven <span class="citation" data-cites="Boets:2015gl">(<a href="#ref-Boets:2015gl" role="doc-biblioref">Boets et al., 2015</a>)</span>. Model selection methods can include traditional inferential approaches such as unconstrained searches of a dataset for patterns that explain variations in the response variable, or use of ensemble-modelling methods <span class="citation" data-cites="Barnard2019">(<a href="#ref-Barnard2019" role="doc-biblioref">Barnard et al., 2019</a>)</span>. Ensemble modelling procedures might aim to derive a single model, or a multi-model average <span class="citation" data-cites="Yates2018">(<a href="#ref-Yates2018" role="doc-biblioref">Yates et al., 2018</a>)</span>. Refining actions to develop a model could include iteratively dropping parameters or adding them, or aggregating / disaggregating system descriptors, such as dimensionality and processes <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</p>
 </div>
@@ -1052,7 +1065,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1073,16 +1086,16 @@ Preregistration Item
 <section id="describe-parameter-estimation-technique-and-performance-criteria" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="describe-parameter-estimation-technique-and-performance-criteria"><span class="header-section-number">3.4</span> Describe parameter estimation technique and performance criteria</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Before calibrating the model to the data, the performance criteria for judging the calibration (or model fit) are specified. These criteria and their underlying assumptions should reflect the desired properties of the parameter estimates / structure <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>. For example, modellers might seek parameter estimates that are robust to outliers, unbiased, and yield appropriate predictive performance. Modellers will need to consider whether the assumptions of the estimation technique yielding those desired properties are suited to the problem at hand. For integrated or sub-divided models, other considerations might include choices about where to disaggregate the model for parameter estimation; e.g.&nbsp;spatial sectioning (streams into reaches) and temporal sectioning (piece-wise linear models) <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</p>
 </div>
@@ -1096,7 +1109,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1116,7 +1129,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1137,7 +1150,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1150,16 +1163,16 @@ Preregistration Item
 <section id="specify-formal-models" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="specify-formal-models"><span class="header-section-number">3.6</span> Specify formal model(s)</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Once critical decisions have been made about the modelling approach and method of model specification, the conceptual model is translated into the quantitative model.</p>
 </div>
@@ -1171,7 +1184,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1191,16 +1204,16 @@ Preregistration Item
 <section id="model-calibration-and-validation-scheme" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="model-calibration-and-validation-scheme"><span class="header-section-number">4.1</span> Model calibration and validation scheme</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section pertains to any data calibration, validation or testing schemes that will be implemented. For example, the model may be tested on data independent of those used to parameterise the model (external validation), or the model may be cross-validated on random sub-samples of the data used to parameterise the model <span class="citation" data-cites="Yates2018 Barnard2019">(<a href="#ref-Barnard2019" role="doc-biblioref">Barnard et al., 2019</a>; internal cross-validation <a href="#ref-Yates2018" role="doc-biblioref">Yates et al., 2018</a>)</span>. For some types of models, hyper-parameters are estimated from data, and may be tuned on further independent holdouts of the training data (“validation data”).</p>
 </div>
@@ -1212,7 +1225,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1221,19 +1234,19 @@ Preregistration Item
 </ul>
 </div>
 </div>
-<section id="describe-calibrationvalidation-data" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="describe-calibrationvalidation-data"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</h3>
+<section id="sec-calibration-data" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-calibration-data"><span class="header-section-number">4.1.1</span> Describe calibration/validation data</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation &amp; Rationale
+<span class="screen-reader-only">Note</span>Explanation &amp; Rationale
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The following items pertain to properties of the <em>datasets</em> used for calibration (training), validation, and testing.</p>
 </div>
@@ -1245,7 +1258,7 @@ Explanation &amp; Rationale
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1255,9 +1268,13 @@ Preregistration Item
 </ul>
 <p><em>If using external / independent holdout data for model testing and evaluation (delete as needed):</em></p>
 <ul class="task-list">
-<li><label><input type="checkbox">Which data will be used as a the testing data? What method will you be used for generating training / test data subsets?</label></li>
+<li><label><input type="checkbox">Which data will be used as for the testing data? What method will be used for generating training / test data subsets?</label></li>
 <li><label><input type="checkbox">Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?</label></li>
 <li><label><input type="checkbox">It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?</label></li>
+</ul>
+<p><em>If performing any data exploration or other preliminary analyses (delete as needed)</em></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Describe any data subsets used for each analysis in <em><a href="#sec-exploratory-analyses" class="quarto-xref">Section&nbsp;2.5.3</a>.</em></label></li>
 </ul>
 </div>
 </div>
@@ -1266,16 +1283,16 @@ Preregistration Item
 <section id="implementation-verification" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="implementation-verification"><span class="header-section-number">4.2</span> Implementation verification</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation &amp; Examples
+<span class="screen-reader-only">Note</span>Explanation &amp; Examples
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-49" class="callout-49-contents callout-collapse collapse">
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Model implementation verification is the process of ensuring that the model has been correctly implemented, and that the model performs as described by the model description <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>. This process is distinct from model checking, which assesses the model’s performance in representing the system of interest <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al., 2018</a>)</span>.</p>
 <ul>
@@ -1291,7 +1308,7 @@ Explanation &amp; Examples
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1304,18 +1321,18 @@ Preregistration Item
 <section id="model-checking" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="model-checking"><span class="header-section-number">4.3</span> Model checking</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rationale &amp; Explanation
+<span class="screen-reader-only">Note</span>Rationale &amp; Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-51" class="callout-51-contents callout-collapse collapse">
+<div id="callout-52" class="callout-52-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>“Model Checking” goes by many names (“conditional verification”, “quantitative verification”, “model output verification” ), and refers to a series of analyses that assess a model’s performance in representing the system of interest <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al., 2018</a>)</span>. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al., 2018</a>)</span>. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</p>
+<p>“Model Checking” goes by many names (“conditional verification”, “quantitative verification”, “model output verification”), and refers to a series of analyses that assess a model’s performance in representing the system of interest <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al., 2018</a>)</span>. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system <span class="citation" data-cites="Conn:2018hd">(<a href="#ref-Conn:2018hd" role="doc-biblioref">Conn et al., 2018</a>)</span>. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</p>
 </div>
 </div>
 </div>
@@ -1327,7 +1344,7 @@ Rationale &amp; Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1342,16 +1359,16 @@ Preregistration Item
 <section id="qualitative-model-checking" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="qualitative-model-checking"><span class="header-section-number">4.3.2</span> Qualitative model checking</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-53" class="callout-53-contents callout-collapse collapse">
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This step is largely informal and case-specific, but requires‚ ‘face validation’ with model users / clients / managers who aren’t involved in the development of the model to assess whether the interactions and outcomes of the model are feasible an defensible <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>. This process is sometimes called a “laugh test” or a “pub test” and in addition to checking the model’s believability, it builds the client’s confidence in the model <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>. Face validation could include structured walk-throughs, or presenting descriptions, visualisations or summaries of model results to experts for assessment.</p>
 </div>
@@ -1363,7 +1380,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1381,7 +1398,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1400,16 +1417,16 @@ Preregistration Item
 <section id="model-validation-and-evaluation" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Model Validation and Evaluation</h1>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-56" class="callout-56-contents callout-collapse collapse">
+<div id="callout-57" class="callout-57-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The model validation &amp; evaluation phase comprises a suite of analyses that collectively inform inferences about whether, and under what conditions, a model is suitable to meet its intended purpose <span class="citation" data-cites="Augusiak:2014gz">(<a href="#ref-Augusiak:2014gz" role="doc-biblioref">Augusiak et al., 2014</a>)</span>. Errors in design and implementation of the model and their implication on the model output are assessed. Ideally independent data is used against the model outputs to assess whether the model output behaviour exhibits the required accuracy for the model’s intended purpose. The outcomes of these analyses build confidence in the model applications and increase understanding of model strengths and limitations. Model evaluation including, model analysis, should complement model checking. It should evaluate model checking, and consider over-fitting and extrapolation. As the proportion of calibrated or uncertain parameters increases, so does the risk that the model seemingly works correctly, but for the wrong mechanistic reasons <span class="citation" data-cites="Boettiger2022">(<a href="#ref-Boettiger2022" role="doc-biblioref">Boettiger, 2022</a>)</span>. Evaluation thus complements model checking because we can rule out the chance that the model fits the calibration data well, but has not captured the relevant ecological mechanisms of the system pertinent to the research question or the decision problem underpinning the model <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>. Evaluation of model outputs against external data in conjunction with the results from model checking provide information about the structural realism and therefore credibility of the model <span class="citation" data-cites="Grimm2016">(<a href="#ref-Grimm2016" role="doc-biblioref">Grimm &amp; Berger, 2016</a>)</span>.</p>
 <!-- #NOTE, explain how model-checking is different to model validation / evaluation. Explain model analysis / application. the phases of the modelling process underlying this template need exposition somewhere -->
@@ -1419,16 +1436,16 @@ Explanation
 <section id="model-output-corroboration" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="model-output-corroboration"><span class="header-section-number">5.1</span> Model output corroboration</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-57" class="callout-57-contents callout-collapse collapse">
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Ideally, model outputs or predictions are compared to independent data and patterns that were not used to develop, parameterise, or verify the model. Testing against a dataset of response and predictor variables that are spatially and/or temporally independent from the training dataset minimises the risk of artificially inflating model performance measures <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al., 2019</a>)</span>. Although the corroboration of model outputs against an independent validation dataset is considered the ‘gold standard’ for showing that a model properly represents the internal organisation of the system, model validation is not always possible because empirical experiments are infeasible or model users are working on rapid-response time-frames, hence, why ecologists often model in the first place <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>. Independent predictions might instead be tested on sub-models. Alternatively, patterns in model output that are robust and seem characteristic of the system can be identified and evaluated in consultation with the literature or by experts to judge how accurate the model output is <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>.</p>
 </div>
@@ -1440,13 +1457,13 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
 <li><label><input type="checkbox">State whether you will corroborate the model outputs on external data, and document any independent validation data in step.</label></li>
-<li><label><input type="checkbox">It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building <span class="citation" data-cites="Dwork2015">(<a href="#ref-Dwork2015" role="doc-biblioref">Dwork et al., 2015</a>)</span>, describe the relationship modellers have to model validation data, e.g.&nbsp;will independent datasets be known to any modeller or analyst involved in the model building process?</label></li>
+<li><label><input type="checkbox">It is preferable that any independent data used for model evaluation remains unobserved to modellers during the process of model building <span class="citation" data-cites="Dwork2015">(<a href="#ref-Dwork2015" role="doc-biblioref">Dwork et al., 2015</a>)</span>, describe the relationship modellers have to model validation data, e.g.&nbsp;will independent datasets be known to any modeller or analyst involved in the model building process?</label></li>
 <li><label><input type="checkbox">If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.</label></li>
 </ul>
 </div>
@@ -1455,16 +1472,16 @@ Preregistration Item
 <section id="choose-performance-metrics-and-criteria" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="choose-performance-metrics-and-criteria"><span class="header-section-number">5.2</span> Choose performance metrics and criteria</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-59" class="callout-59-contents callout-collapse collapse">
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Model performance can be quantified by a range of tests, including measures of agreement between predictions and independent observations, or estimates of accuracy, bias, calibration, discrimination refinement, resolution and skill <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al., 2019</a>)</span>. Note that the performance metrics and criteria in this section are used for evaluating the structured and parameterised models (ideally) on independent holdout data, so this step is additional to any performance criteria used for determining model structure or parameterisation (<a href="#sec-parameter-model-fit-performance-criteria" class="quarto-xref">Section&nbsp;3.4.2</a>).</p>
 </div>
@@ -1476,7 +1493,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1491,16 +1508,16 @@ Preregistration Item
 <section id="model-analysis" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="model-analysis"><span class="header-section-number">5.3</span> Model analysis</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rationale &amp; Explanation
+<span class="screen-reader-only">Note</span>Rationale &amp; Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-61" class="callout-61-contents callout-collapse collapse">
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Uncertainty in models arises due to incomplete system understanding (which processes to include, or which interact), from imprecise, finite and sparse data measurements, and from uncertainty in input conditions and scenarios for model simulations or runs <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>. Non-technical uncertainties can also be introduced throughout the modelling process, such as uncertainties arising from issues in problem-framing, indeterminicies, and modeller / client values <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</p>
 <p>The purpose of model analysis is to prevent blind trust in the model by understanding how model outputs have emerged, and to ‘challenge’ the model by verifying whether the model is still believable and fit for purpose if one or more parameters are changed <span class="citation" data-cites="Grimm:2014es">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>)</span>.</p>
@@ -1512,16 +1529,16 @@ Rationale &amp; Explanation
 <section id="uncertainty-analyses" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="uncertainty-analyses"><span class="header-section-number">5.3.1</span> Uncertainty Analyses</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-62" class="callout-62-contents callout-collapse collapse">
+<div id="callout-63" class="callout-63-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Uncertainty can arise from different modelling techniques, response data and predictor variables <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al., 2019</a>)</span>. Uncertainty analyses characterise the uncertainty in model outputs, and identify how uncertainty in model parameters affects uncertainty in model output, but does not identify which model assumptions are driving this behaviour <span class="citation" data-cites="Grimm:2014es Saltelli2019">(<a href="#ref-Grimm:2014es" role="doc-biblioref">Grimm et al., 2014</a>; <a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al., 2019</a>)</span>. Uncertainty analyses can include propagating known uncertainties through the model, or by investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al., 2019</a>)</span>, for example. It could also include characterising the output distribution, such as through empirical construction using model output data points. It could also include extracting summary statistics like the mean, median and variance from this distribution, and perhaps constructing confidence intervals on the mean <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al., 2019</a>)</span>.</p>
 </div>
@@ -1533,12 +1550,12 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><label><input type="checkbox">Please describe how you will characterise model and data uncertainties, e.g.&nbsp;propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al., 2019</a>)</span>, or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al., 2019</a>)</span>.</label></li>
+<li><label><input type="checkbox">Describe how you will characterise model and data uncertainties, e.g.&nbsp;propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations <span class="citation" data-cites="Araujo2019">(<a href="#ref-Araujo2019" role="doc-biblioref">Araújo et al., 2019</a>)</span>, or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al., 2019</a>)</span>.</label></li>
 <li><label><input type="checkbox">Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚ discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes” <span class="citation" data-cites="Jakeman:2006ii">(<a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>.</label></li>
 <li><label><input type="checkbox">Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.</label></li>
 <li><label><input type="checkbox">If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty <span class="citation" data-cites="Jakeman:2006ii">(typically in the form of probabilistic parameter covariance, <a href="#ref-Jakeman:2006ii" role="doc-biblioref">Jakeman et al., 2006</a>)</span>, specify which measure of uncertainty you will use.</label></li>
@@ -1549,16 +1566,16 @@ Preregistration Item
 <section id="sensitivity-analyses" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="sensitivity-analyses"><span class="header-section-number">5.3.2</span> Sensitivity analyses</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-64-contents" aria-controls="callout-64" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-65-contents" aria-controls="callout-65" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explanation
+<span class="screen-reader-only">Note</span>Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-64" class="callout-64-contents callout-collapse collapse">
+<div id="callout-65" class="callout-65-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sensitivity analysis examines how uncertainty in model outputs can be apportioned to different sources of uncertainty in model input <span class="citation" data-cites="Saltelli2019">(<a href="#ref-Saltelli2019" role="doc-biblioref">Saltelli et al., 2019</a>)</span>.</p>
 </div>
@@ -1570,7 +1587,7 @@ Explanation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1590,7 +1607,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1611,7 +1628,7 @@ Preregistration Item
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Preregistration Item
+<span class="screen-reader-only">Caution</span>Preregistration Item
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1632,6 +1649,9 @@ Preregistration Item
 <div id="ref-Araujo2019" class="csl-entry" role="listitem">
 Araújo, M., Anderson, R., Márcia Barbosa, A., Beale, C., Dormann, C., Early, R., Garcia, R., Guisan, A., Maiorano, L., Naimi, B., O’Hara, R., Zimmermann, N., &amp; Rahbek, C. (2019). Standards for distribution models in biodiversity assessments. <em>Sci Adv</em>, <em>5</em>(1), eaat4858. <a href="https://doi.org/10.1126/sciadv.aat4858">https://doi.org/10.1126/sciadv.aat4858</a>
 </div>
+<div id="ref-Arnqvist2020" class="csl-entry" role="listitem">
+Arnqvist, G. (2020). Mixed models offer no freedom from degrees of freedom. <em>Trends in Ecology &amp; Evolution</em>, <em>35</em>(4), 329–335. <a href="https://doi.org/10.1016/j.tree.2019.12.004">https://doi.org/10.1016/j.tree.2019.12.004</a>
+</div>
 <div id="ref-Augusiak:2014gz" class="csl-entry" role="listitem">
 Augusiak, J., Van den Brink, P. J., &amp; Grimm, V. (2014). Merging validation and evaluation of ecological models to <span>“evaludation”</span>: A review of terminology and a practical approach. <em>Ecological Modelling</em>, <em>280</em>, 117–128. <a href="https://doi.org/10.1016/j.ecolmodel.2013.11.009">https://doi.org/10.1016/j.ecolmodel.2013.11.009</a>
 </div>
@@ -1644,6 +1664,9 @@ Boets, P., Landuyt, D., Everaert, G., Broekx, S., &amp; Goethals, P. L. M. (2015
 <div id="ref-Boettiger2022" class="csl-entry" role="listitem">
 Boettiger, C. (2022). The forecast trap. <em>Ecol Lett</em>. <a href="https://doi.org/10.1111/ele.14024">https://doi.org/10.1111/ele.14024</a>
 </div>
+<div id="ref-Campbell2021" class="csl-entry" role="listitem">
+Campbell, H. (2021). The consequences of checking for zero<span>-</span>inflation and overdispersion in the analysis of count data. <em>Methods in Ecology and Evolution</em>, <em>12</em>(4), 665–680. <a href="https://doi.org/10.1111/2041-210x.13559">https://doi.org/10.1111/2041-210x.13559</a>
+</div>
 <div id="ref-Cartwright:2016kr" class="csl-entry" role="listitem">
 Cartwright, S. J., Bowgen, K. M., Collop, C., Hyder, K., Nabe-Nielsen, J., Stafford, R., Stillman, R. A., Thorpe, R. B., &amp; Sibly, R. M. (2016). Communicating complex ecological models to non-scientist end users. <em>Ecological Modelling</em>, <em>338</em>, 51–59. <a href="https://doi.org/10.1016/j.ecolmodel.2016.07.012">https://doi.org/10.1016/j.ecolmodel.2016.07.012</a>
 </div>
@@ -1655,6 +1678,9 @@ Dwork, C., Feldman, V., Hardt, M., Pitassi, T., Reingold, O., &amp; Roth, A. (20
 </div>
 <div id="ref-Fraser:2017jf" class="csl-entry" role="listitem">
 Fraser, H., Rumpff, L., Yen, J. D. L., Robinson, D., &amp; Wintle, B. A. (2017). Integrated models to support multiobjective ecological restoration decisions. <em>Conservation Biology</em>, <em>31</em>(6), 1418–1427. <a href="https://doi.org/10.1111/cobi.12939">https://doi.org/10.1111/cobi.12939</a>
+</div>
+<div id="ref-Gould2026" class="csl-entry" role="listitem">
+Gould, E., Fraser, H., Wintle, B., Rumpff, L., &amp; Fidler, F. (2026). <em>A framework for questionable research practices in ecological modelling</em>. <a href="https://doi.org/10.32942/X2DQ0K">https://doi.org/10.32942/X2DQ0K</a>
 </div>
 <div id="ref-Gould2024a" class="csl-entry" role="listitem">
 Gould, E., Jones, C., Yen, J. D. L., Fraser, H., Wootton, H., Vivian, L., Good, M., Duncan, D., Rumpff, L., &amp; Fidler, F. (2024). <em>EcoConsPreReg: A guide to adaptive preregistration for model-based research in ecology and conservation</em>. <a href="https://doi.org/10.5281/ZENODO.10807029">https://doi.org/10.5281/ZENODO.10807029</a>
@@ -1671,8 +1697,14 @@ Ivimey, E. R., Pick, J. L., Bairos, K. R., Culina, A., Gould, E., Grainger, M., 
 <div id="ref-Jakeman:2006ii" class="csl-entry" role="listitem">
 Jakeman, A. J., Letcher, R. A., &amp; Norton, J. P. (2006). Ten iterative steps in development and evaluation of environmental models. <em>Environmental Modelling &amp; Software</em>, <em>21</em>(5), 602–614. <a href="https://doi.org/10.1016/j.envsoft.2006.01.004">https://doi.org/10.1016/j.envsoft.2006.01.004</a>
 </div>
+<div id="ref-Kapoor2023" class="csl-entry" role="listitem">
+Kapoor, S., &amp; Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. <em>Patterns</em>, <em>4</em>(9), 100804. <a href="https://doi.org/10.1016/j.patter.2023.100804">https://doi.org/10.1016/j.patter.2023.100804</a>
+</div>
 <div id="ref-Liu2008" class="csl-entry" role="listitem">
 Liu, C. C., &amp; Aitkin, M. (2008). Bayes factors: Prior sensitivity and model generalizability. <em>Journal of Mathematical Psychology</em>, <em>52</em>(6), 362–375. <a href="https://doi.org/10.1016/j.jmp.2008.03.002">https://doi.org/10.1016/j.jmp.2008.03.002</a>
+</div>
+<div id="ref-Liu2020" class="csl-entry" role="listitem">
+Liu, Y., Althoff, T., &amp; Heer, J. (2020). <em>Proceedings of the 2020 CHI conference on human factors in computing systems</em>. <a href="https://doi.org/10.1145/3313831.3376533">https://doi.org/10.1145/3313831.3376533</a>
 </div>
 <div id="ref-Liu2018b" class="csl-entry" role="listitem">
 Liu, Z., Peng, C., Work, T., Candau, J.-N., DesRochers, A., &amp; Kneeshaw, D. (2018). Application of machine-learning methods in forest ecology: Recent progress and future challenges. <em>Environmental Reviews</em>, <em>26</em>(4), 339–350. https://doi.org/<a href="https://doi.org/10.1139/er-2018-0034">https://doi.org/10.1139/er-2018-0034</a>
@@ -1754,13 +1786,14 @@ Yates, K., Bouchet, P., Caley, M., Mengersen, K., Randin, C., Parnell, S., Field
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
