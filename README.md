@@ -4,7 +4,7 @@
 
 Here we present a preregistration template for ecological models in ecology, conservation and related fields. This template is based on the EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2) by Gould *et al.* (2024)[^readme-1].
 
-[^readme-1]: Gould, E., Jones, Christopher, S., Yen, J. D. L., Fraser, Hannah, S., Wootton, H., Vivian, L., Good, M., Duncan, David, H., Rumpff, L., & Fidler, F. (2024). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2). Zenodo. <https://doi.org/10.5281/zenodo.10884635>
+[^readme-1]: Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.S., Wootton, H., Good, M.K., Duncan, D.H., Wintle, B.C., Rumpff, L. (2024). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2). Zenodo. <https://doi.org/10.5281/zenodo.10884635>
 
 For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *Adaptive Preregistration* approach (insert cross-ref to preprint). However, this template may be used with any mode of preregistration.
 
