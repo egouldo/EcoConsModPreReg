@@ -363,7 +363,7 @@ This section specifies the plan for collecting, processing and preparing data av
 
 **Sampling Plan (for data you will collect, delete as appropriate):**
 
--   [ ] Data collection procedures - Please describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.
+-   [ ] Data collection procedures - describe your data collection process, including how sites and transects or any other physical unit were selected and arranged. Describe any inclusion or exclusion rules, and the study timeline.
 -   [ ] Sample Size - Describe the sample size of your study.
 -   [ ] Sample Size Rationale - Describe how you determined the appropriate sample size for your study. It could include feasibility constraints, such as time, money or personnel.
 -   [ ] If sample size cannot be specified, specify a stopping rule - i.e. how will you decide when to terminate your data collection?
@@ -377,7 +377,7 @@ This section specifies the plan for collecting, processing and preparing data av
 -   [ ] Describe any data preparation and processing steps, including manipulation of environmental layers (e.g. standardisation and geographic projection) or variable construction (e.g. Principal Component Analysis).
 :::
 
-### Describe any data exploration or preliminary data analyses.
+### Describe any data exploration or preliminary data analyses
 
 ::: {.callout-note collapse="true"}
 ## Explanation
@@ -578,7 +578,7 @@ The following items pertain to properties of the *datasets* used for calibration
 
 *If using external / independent holdout data for model testing and evaluation (delete as needed):*
 
--   [ ] Which data will be used as a the testing data? What method will you be used for generating training / test data subsets?
+-   [ ] Which data will be used as for the testing data? What method will be used for generating training / test data subsets?
 -   [ ] Describe any known differences between the training/validation and testing datasets, the relative size of each, as well as any stratification methods used for ensuring evenness of groups between data sets?
 -   [ ] It is preferable that any independent data used for model testing remains unknown to modellers during the process of model development, please describe the relationship modellers have to model validation data, will independent datasets be known or accessible to any modeller or analyst?
 :::
@@ -605,7 +605,7 @@ Model implementation verification is the process of ensuring that the model has 
 ::: {.callout-note collapse="true"}
 ## Rationale & Explanation
 
-"Model Checking" goes by many names ("conditional verification", "quantitative verification", "model output verification" ), and refers to a series of analyses that assess a model's performance in representing the system of interest [@Conn:2018hd]. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system [@Conn:2018hd]. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation [@Jakeman:2006ii].
+"Model Checking" goes by many names ("conditional verification", "quantitative verification", "model output verification"), and refers to a series of analyses that assess a model's performance in representing the system of interest [@Conn:2018hd]. Model checking aids in diagnosing assumption violations, and reveals where a model might need to be altered to better represent the data, and therefore system [@Conn:2018hd]. Quantitative model checking diagnostics include goodness of fit, tests on residuals or errors, such as for heteroscedascity, cross-correlation, and autocorrelation [@Jakeman:2006ii].
 :::
 
 ### Quantitative model checking
@@ -668,7 +668,7 @@ Ideally, model outputs or predictions are compared to independent data and patte
 ## Preregistration Item
 
 -   [ ] State whether you will corroborate the model outputs on external data, and document any independent validation data in step.
--   [ ] It is preferable that any independent data used for model evaluation remains unknown to modellers during the process of model building [@Dwork2015], describe the relationship modellers have to model validation data, e.g. will independent datasets be known to any modeller or analyst involved in the model building process?
+-   [ ] It is preferable that any independent data used for model evaluation remains unobserved to modellers during the process of model building [@Dwork2015], describe the relationship modellers have to model validation data, e.g. will independent datasets be known to any modeller or analyst involved in the model building process?
 -   [ ] If unable to evaluate the model outputs against independent data, explain why and explain what steps you will take to interrogate the model.
 :::
 
@@ -713,7 +713,7 @@ Uncertainty can arise from different modelling techniques, response data and pre
 ::: callout-caution
 ## Preregistration Item
 
--   [ ] Please describe how you will characterise model and data uncertainties, e.g. propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations [@Araujo2019], or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals [@Saltelli2019].
+-   [ ] Describe how you will characterise model and data uncertainties, e.g. propagating known uncertainties through the model, investigating the effect of different model scenarios with different parameters and modelling technique combinations [@Araujo2019], or empirically constructing model distributions from model output data points, and extracting summary statistics, including the mean, median, variance, and constructing confidence intervals [@Saltelli2019].
 -   [ ] Relate your choice of analysis to the context and purposes of the model described in the problem formulation phase. For instance ‚ discrepancies between model output and observed output may be important for forecasting models, where cost, benefit, an risk over a substantial period must be gauged, but much less critical for decision-making or management models where the user may be satisfied with knowing that the predicted ranking order of impacts of alternative scenarios or management options is likely to be correct, with only a rough indication of their sizes" [@Jakeman:2006ii].
 -   [ ] Briefly describe how you will summarise the results of these in silico experiments with graphical, tabular, or other devices, such as summary statistics.
 -   [ ] If the chosen modelling approach is able to explicitly articulate uncertainty due to data, measurements or baseline conditions, such as by providing estimates of uncertainty [typically in the form of probabilistic parameter covariance, @Jakeman:2006ii], specify which measure of uncertainty you will use.
