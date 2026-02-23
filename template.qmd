@@ -87,7 +87,7 @@ abstract: |
   
   Replace author, author-affiliations and persistent ID's (e.g. [ORCID iD]( https://orcid.org/)), keywords, title and abstract [metadata in the document YAML](https://quarto.org/docs/journals/authors.html) as relevant to your study. 
   
-  All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study. Additional preregistration items can be added as required at the researchers' discretion.
+  All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study, which can be deleted. Additional preregistration items can be added as required at the researchers' discretion.
 keywords: 
   - preregistration
   - preregistration template
