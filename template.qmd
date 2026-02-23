@@ -381,10 +381,20 @@ This section specifies the plan for collecting, processing and preparing data av
 
 ### Describe any data exploration or preliminary data analyses
 
-::: {.callout-note collapse="true"}
+::: {.callout-note}
 ## Explanation
 
-In most modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018].
+In many modelling cases, it is necessary to perform preliminary analyses to understand the data and check that assumptions and requirements of the chosen modelling procedures are met. Data exploration prior to model fitting or development may include exploratory analyses to check for collinearity, spatial and temporal coverage, quality and resolution, outliers, or the need for transformations [@Yates2018].
+:::
+
+::: {.callout-warning}
+## Caution!
+
+Any modelling and analysis decisions based on data exploration or preliminary investigations increase the risk of questionable research practices and overfitting 
+
+should ideally be performed on a small and independent dataset, separate from the full training and test datasets. 
+
+
 :::
 
 ::: callout-caution
