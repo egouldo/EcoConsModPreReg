@@ -81,6 +81,7 @@ affiliations:
 date: last-modified
 bibliography: references.bib
 license: CC BY-NC-SA
+csl: methods-in-ecology-and-evolution.csl
 abstract: |
   Here we present a preregistration template for ecological models in ecology, conservation and related fields.
   
