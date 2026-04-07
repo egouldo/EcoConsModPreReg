@@ -2,11 +2,14 @@
 
 [![](https://zenodo.org/badge/914660247.svg)](https://doi.org/10.5281/zenodo.15655052)
 
-Here we present a preregistration template for ecological models in ecology, conservation and related fields. This template is based on the EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2) by Gould *et al.* (2024)[^readme-1].
 
-[^readme-1]: Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.S., Wootton, H., Good, M.K., Duncan, D.H., Wintle, B.C., Rumpff, L. (2024). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2). Zenodo. <https://doi.org/10.5281/zenodo.10884635>
+This repository provides the Quarto template extension for preregistering ecological modelling studies[^readme-1]. The template has been developped for use within an *Adaptive Preregistration* approach[^readme-2], however can be used with standard approaches to preregistration. For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend following the Adaptive Preregistration procedure, which is set out at <https://egouldo.github.io/EcoConsPreReg/>[^readme-3].
 
-For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *Adaptive Preregistration* approach (insert cross-ref to preprint). However, this template may be used with any mode of preregistration.
+[^readme-1]: This template is derived from Gould, E., Jones, C.S., Yen, J.D.L., Fraser, H.S., Wootton, H., Good, M.K., Duncan, D.H., Wintle, B.C., Rumpff, L. (2026). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation (v1.0.2). Zenodo. <https://doi.org/10.5281/zenodo.10884635>
+
+[^readme-2]: Gould, E., Jones, C., Yen, J., Fraser, H., Wootton, H., Good, M., Duncan, D., Hauser, C., Wintle, B., & Rumpff, L. (2025). “But I can’t preregister my research”: Improving the reproducibility and transparency of ecology and conservation with adaptive preregistration for model-based research. EcoEvoArXiv [Preprint]. <https://doi.org/10.32942/X2GW66>
+
+[^readme-3]: Gould, E., Jones, Christopher, S., Yen, J. D. L., Fraser, Hannah, S., Wootton, H., Vivian, L., Good, M., Duncan, David, H., Rumpff, L., & Fidler, F. (2026). EcoConsPreReg: A Guide to Adaptive Preregistration for Model-Based Research in Ecology and Conservation. Zenodo. <https://doi.org/10.5281/zenodo.19064144>
 
 ## Creating a New Preregistration
 
@@ -54,3 +57,13 @@ Each listed author / contributor's intended contribution should be provided with
 ### Citations
 
 `EcoConsModPreReg` documents default to using the [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210x/author-guidelines "Author Guidelines") journal citation style. This can be overridden by adding your own `.csl` file to the document directory, and updating the quarto document yaml metadata to point to the new .csl file, see the [quarto citations authoring guide](https://quarto.org/docs/authoring/citations.html) for details.
+
+# Referencing this work
+
+To cite the Quarto extension "EcoConsModPreReg" in publications or preregistrations use:
+
+> Gould, E. (2026) "EcoConsModPreReg: A Quarto Template for Preregistering Ecological Modelling Studies" Zenodo. <https://doi.org/10.5281/zenodo.15655052>
+
+To cite the preregistration template used in "EcoConsModPreReg" in publications or preregistrations use:
+
+> Gould, E., Jones, C., Yen, J., Fraser, H., Wootton, H., Good, M., Duncan, D., Hauser, C., Wintle, B., & Rumpff, L. (2025). “But I can’t preregister my research”: Improving the reproducibility and transparency of ecology and conservation with adaptive preregistration for model-based research. EcoEvoArXiv [Preprint]. <https://doi.org/10.32942/X2GW66>
