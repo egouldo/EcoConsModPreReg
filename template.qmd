@@ -1,10 +1,11 @@
 ---
 title: "Ecological Modelling Preregistration Template" #focussed, descriptive title with relevant key terms reflecting what will be done in study
 format:
-  ecoconsmodprereg-pdf: default
+  ecoconsmodprereg-pdf:
+    keep-tex: true
   ecoconsmodprereg-html: default
   ecoconsmodprereg-docx: default
-authors: # Replace with authors in your study 
+authors: # Replace with authors in your study
   - name: Elliot Gould
     email: elliot.gould@unimelb.edu.au
     url: https://github.com/egouldo
@@ -21,7 +22,7 @@ authors: # Replace with authors in your study
     affiliations:
       - ref: 1
       - ref: 2
-    affil-id: 
+    affil-id:
       - 1
       - 2
     id: CJ
@@ -84,14 +85,13 @@ license: CC BY-NC-SA
 csl: methods-in-ecology-and-evolution.csl
 abstract: |
   Here we present a preregistration template for ecological models in ecology, conservation and related fields.
-  
+
   Replace author, author-affiliations and persistent ID's (e.g. [ORCID iD]( https://orcid.org/)), keywords, title and abstract [metadata in the document YAML](https://quarto.org/docs/journals/authors.html) as relevant to your study.
-  
-  For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2024a]. Please read the [*Primer on Adaptive Preregistration*](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) before beginning.
-  
-  
+
+  For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2026a]. Please read the [*Primer on Adaptive Preregistration*](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) before beginning.
+
   All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study, which can be deleted. Additional preregistration items can be added as required at the researchers' discretion.
-keywords: 
+keywords:
   - preregistration
   - preregistration template
   - transparency
@@ -393,7 +393,7 @@ In many modelling cases, it is necessary to perform preliminary analyses to unde
 
 Any modelling and analysis decisions based on data exploration or preliminary investigations increase the risk of questionable research practices and overfitting [@Gould2026]. Such *data-dependent* analytic decisions [@Liu2020] should ideally be performed using a small, independent subset of the full dataset in order to avoid model overfitting arising from "data leakage" or "model selection bias" [@Kapoor2023; @Campbell2021; @Arnqvist2020].
 
-The preregistration item below follows a protocol for registering 'flexible' analyses, please see our ['Primer on Adaptive Preregistration'](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) in Gould et al. -@Gould2024a for details.
+The preregistration item below follows a protocol for registering 'flexible' analyses, please see our ['Primer on Adaptive Preregistration'](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) in Gould et al. -@Gould2026a for details.
 :::
 
 ::: callout-caution
