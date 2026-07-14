@@ -91,6 +91,8 @@ abstract: |
   For non-trivial modelling studies, especially where model parameter and structure is in any way data-contingent, we recommend taking an *[Adaptive Preregistration](https://egouldo.github.io/EcoConsPreReg/)* approach [@Gould2026a]. Please read the [*Primer on Adaptive Preregistration*](https://egouldo.github.io/EcoConsPreReg/adaptive_preregistration_background.html) before beginning.
 
   All preregistration items should be completed, excluding items marked as optional or in cases where they are not applicable to your study, which can be deleted. Additional preregistration items can be added as required at the researchers' discretion.
+
+  *Acknowledgements:* We thank DEECA-ARI workshop participants for their valuable time in helping develop this template.
 keywords:
   - preregistration
   - preregistration template
