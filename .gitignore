@@ -15,3 +15,4 @@ template_files
 
 /.quarto/
 **/*.quarto_ipynb
+.vscode/settings.json
